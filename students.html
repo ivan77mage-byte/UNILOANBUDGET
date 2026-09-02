@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="topbar">
+
+        <div class="nav-group admin-nav">
+
+            <span class="role">
+                ADMIN
+            </span>
+            <a href="admin_login.html">Login</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a class="nav-current" href="students.html">Students</a>
+            <a href="statistics.html">Statistics</a>
+        </div>
+    </header>
+
+    <div class="app-shell">
+
+        <aside class="sidebar">
+
+            <a class="brand" href="#">
+                UniLoan<span>Budget</span>
+            </a>
+
+            <nav class="side-nav">
+                <a href="dashboard.html">📊 Dashboard</a>
+                <a class="side-current" href="students.html">🎓 Students</a>
+                <a href="statistics.html">📝 Statistics</a>
+            </nav>
+
+        </aside>
+
+        <main class="content">
+
+            <section class="page-heading">
+                <h1>Students accounts</h1>
+            </section>
+
+            <section class="students-toolbar">
+
+                <div class="students-count">
+
+                    <strong id="registered-students">
+                        <!--HERE PHP HAS TO INSERT THE 
+                        EXACT NUMBER OF 
+                        REGISTERED STUDENTS FROM DATABASE
+                        -->
+                    </strong>
+
+                    <span><i>REGISTERED STUDENTS</i></span>
+
+                </div>
+
+                <div class="students-search">
+
+                    <input 
+                        type="search" 
+                        id="student-search" 
+                        placeholder="Search by name or E-mail"
+                    >
+
+                </div>
+
+            </section>
+
+            <section class="registrations">
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Name</th>
+                                <th>E-mail</th>
+                                <th>University</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="students-table-body">
+
+                            <!--PHP WILL EVENTUALLY GENERATE 
+                            THE STUDENTS RECORDS RIGHT HERE-->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
