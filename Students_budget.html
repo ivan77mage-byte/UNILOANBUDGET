@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget Setup - UniLoanBudget</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+<nav class="navbar">
+
+    <div>
+        <span class="student">STUDENT</span>
+
+        <a href="index.html">Home</a>
+        <a href="login.html">Login / Register</a>
+        <a href="budget.html" class="active">Budget Setup</a>
+        <a href="expense.html">Add Expense</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="reports.html">Reports</a>
+    </div>
+
+    <div>
+        <span class="admin">ADMIN</span>
+        <a href="admin-login.html">Login</a>
+        <a href="admin-dashboard.html">Dashboard</a>
+        <a href="students.html">Students</a>
+        <a href="statistics.html">Statistics</a>
+    </div>
+</nav>
+
+<div class="layout">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Uni<span>Loan</span>Budget</h2>
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="budget.html" class="side-active"> 💼 Budget Setup</a>
+        <a href="expense.html">➕  Add Expense</a>
+        <a href="reports.html">📄  Reports</a>
+    </aside>
+
+
+    <main class="content">
+        <h1>Set up this semester's budget</h1>
+        <p class="subtitle">
+            Split your loan or allowance across categories before you start spending. </p>
+
+        <div class="cards">
+            <!-- BUDGET FORM -->
+            <section class="budget-card">
+                <h2>Loan / allowance details</h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Total amount (TZS)</label>
+                        <input type="number" value=" ">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Source</label>
+
+                        <select>
+                            <option>HESLB Loan</option>
+                            <option>Allowance</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                  </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Semester start</label>
+                        <input type="date" value=" ">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Semester end</label>
+                        <input type="date" value=" ">
+                    </div>
+                </div>
+
+                <h3>Allocate by category</h3>
+                <div class="category">
+                    <label>Chakula / Food</label>
+                    <input type="number" value=" ">
+                </div>
+
+                <div class="category">
+                    <label>Malazi / Rent</label>
+                    <input type="number" value=" ">
+                </div>
+
+                <div class="category">
+                    <label>Usafiri / Transport</label>
+                    <input type="number" value=" ">
+                </div>
+
+                <div class="category">
+                    <label>Vitabu / Books</label>
+                    <input type="number" value=" ">
+                </div>
+
+                <div class="category">
+                    <label>Mengineyo / Other</label>
+                    <input type="number" value=" ">
+                </div>
+
+                <div class="total">
+                    <strong>Total allocated</strong>
+
+                    <span>TZS 1,500,000 of 1,500,000</span>
+                </div>
+
+
+                <button>Save budget</button>
+                <button class="cancel">Cancel</button>
+            </section>
+            <!-- JAVA SCRIPT WILL DECIDE ON HOW TO ENTER, SAVE OR CANCEL DATA  -->
+           
+            <section class="info-card">
+                <h2>Why allocate now?</h2>
+
+                <p> Splitting your loan into categories up front is what makes the running-balance and warning alerts on your dashboard possible.</p>
+
+                <p> You can adjust allocations later in the semester.</p>
+            </section>
+         </div>
+    </main>
+</div>
+
+</body>
+</html>

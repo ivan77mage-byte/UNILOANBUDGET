@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UniLoanBudget - Admin Login</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <main class="admin-login-page">
+
+        <!--LEFT SIDE-->
+        <section class="admin-login-left">
+
+            <a class="admin-login-brand" href="#">
+                UniLoan<span>Budget</span>
+            </a>
+
+            <div class="admin-login-quote">
+
+                <p>
+                    <i>
+                    "We really care about your future.<br>
+                    Best future is the consequence of the<br>
+                    best shot of decisions you make today."
+                    </i>
+                </p>
+
+            </div>
+
+            <p class="admin-login-caption">
+                - UniLoanBudget administration system
+            </p>
+
+        </section>
+
+
+        <!--RIGHT SIDE-->
+        <section class="admin-login-right">
+
+            <div class="admin-login-container">
+
+                <div class="admin-login-tabs">
+
+                    <button 
+                        type="button"
+                        class="admin-tab active"
+                        id="admin-login-tab">
+                        Log in
+                    </button>
+
+                    <button
+                        type="button"
+                        class="admin-tab"
+                        id="admin-create-tab">
+                        Admin account
+                    </button>
+
+                </div>
+
+                <!--ADMIN LOGIN FORM-->
+
+                <!--
+
+                    PHP will later process this form.
+
+                    JavaScript can also be used for:
+                    - client-side validation
+                    - displaying errors
+                    - handling login requests
+
+                -->
+
+                <form 
+                    id="admin-login-form"
+                    class="admin-login-form"
+                    method="POST"
+                    action="">
+
+
+                    <!--ADMIN EMAIL OR ID-->
+
+                    <div class="admin-form-group">
+
+                        <label for="admin-identifier">
+                            Admin Email or ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="admin-identifier"
+                            name="admin_identifier"
+                            placeholder="Enter admin E-mail or ID"
+                            autocomplete="username">
+                    
+                        <!--
+                            PHP/ JAVASCRIPT HAS TO VALIDATE 
+                            E-MAIL OR ID HERE.
+                        -->
+
+                        <small
+                            id="admin-identifier-error"
+                             class="admin-form-error">
+                        </small>
+
+                    </div>
+
+
+                    <!--PASSWORD-->
+                    <div class="admin-form-group">
+
+                        <label for="admin-password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="admin-password"
+                            name="admin_password"
+                            placeholder="Enter password"
+                            autocomplete="current-password">
+                    
+                        <!--
+                            PHP/ JAVESCRIPT HAS TO DISPLAY 
+                            THE ERROR MESSAGE IF THE PASSWORD IS INVALID
+                        -->
+
+                        <small
+                            id="admin-password-error"
+                            class="admin-form-error">
+                        </small>
+
+                    </div>
+
+
+                    <!--
+                        PHP/JavaScript can insert authentication
+                        messages here.
+
+                        Example:
+                        "Invalid administrator credentials."
+                    -->
+                
+                    <p 
+                        id="admin-login-message"
+                        class="admin-login-message">
+                    </p>
+
+
+                    <button
+                        type="submit"
+                        id="admin-login-button"
+                        class="admin-login-button">
+
+                            Log in
+
+                    </button>
+
+                </form>
+
+                <div class="admin-login-footer">
+
+                    <!--
+                        This can later be connected to a PHP page
+                        responsible for administrator account creation. 
+                    -->
+                
+                    <p>
+                        Need an administrator accout?
+                        <a href="#" id="admin-create-account">
+                            Contact system administrator
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section> 
+
+    </main>
+
+    <!--
+        JAVASCRIPT HAS TO BE CONECTED HERE.
+        EXAMPLE: admin_login.js
+        -->
+
+</body>
+</html>

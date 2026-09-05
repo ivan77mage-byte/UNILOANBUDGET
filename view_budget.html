@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UniLoanBudget - Student Budget</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="topbar sponsor-topbar">
+
+        <div class="nav-group sponsor-nav">
+
+            <span class="role">SPONSOR</span>
+
+            <a href="sponsor_dashboard.html">
+                Dashboard
+            </a>
+
+            <a class="nav-current" href="view_budget.html">
+                View Budget
+            </a>
+
+            <a href="view_expenses.html">
+                View Expenses
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div class="sponsor-budget-shell">
+
+        <aside class="sponsor-budget-sidebar">
+
+            <a class="sponsor-budget-brand" href="#">
+                UniLoan<span>Budget</span>
+            </a>
+
+            <nav class="sponsor-budget-side-nav"
+                aria-label="Sponsor navigation">
+
+                <a href="sponsor_dashboard.html">
+
+                    <span class="sponsor-budget-nav-icon">
+                        📊
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+                <a class="sponsor-budget-side-current"
+                   href="view_budget.html">
+
+                    <span class="sponsor-budget-nav-icon">
+                        💰
+                    </span>
+
+                    View Budget
+
+                </a>
+
+                <a href="view_expenses.html">
+
+                    <span class="sponsor-budget-nav-icon">
+                        🧾
+                    </span>
+
+                    View Expenses
+
+                </a>
+
+            </nav>
+
+            <div class="sponsor-budget-sidebar-footer">
+
+                Logged in as Sponsor
+
+            </div>
+
+        </aside>
+
+
+        <main class="sponsor-budget-content">
+
+
+            <section class="sponsor-budget-heading">
+
+                <h1>
+                    Student Budget
+                </h1>
+
+            </section>
+
+
+            <section class="student-budget-summary">
+
+                <div class="student-budget-information">
+
+                    <h2 id="student-name">
+
+                        <!--
+                            PHP/JS:
+                            Fetch and insert the student's
+                            name from the database.
+                        -->
+                    </h2>
+
+                    <p id="student-university">
+                        <!--
+                            PHP/JS:
+                            Fetch and insert the student's
+                            university from the database.
+                        -->
+                    </p>
+
+                </div>
+
+
+                <div class="student-budget-allowance">
+
+                    <strong id="student-monthly-allowance">
+
+                        <!--
+                            PHP/JS:
+                            Fetch and insert the student's
+                            monthly allowance here.
+                        -->
+                    </strong>
+
+                    <span>
+                        allowance per month
+                    </span>
+
+                </div>
+
+            </section>
+
+            <section class="budget-breakdown">
+
+                <div class="budget-tabs">
+
+                    <button
+                        type="button"
+                        class="budget-tab active"
+                        id="categories-tab">
+
+                        Categories
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="budget-tab"
+                        id="allocations-tab">
+
+                        Allocations
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="budget-tab"
+                        id="expenses-tab">
+
+                        Expenses
+
+                    </button>
+
+                </div>
+
+                <div class="budget-category-layout">
+
+                    <div class="budget-chart-area">
+
+                        <div
+                            id="budget-donut-chart"
+                            class="budget-donut-chart">
+
+                            <!--
+                                PHP/JS:
+                                The chart will be generated
+                                from the student's database
+                                budget categories.
+
+                                JavaScript can later calculate
+                                the percentage of each category
+                                and update the chart.
+                            -->
+                            
+                            <div class="budget-donut-center">
+
+                                <span id="budget-total">
+
+                                     <!--
+                                        PHP/JS:
+                                        Insert total allocated
+                                        budget here.
+                                    -->
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="budget-category-list">
+
+                        <!--
+                            PHP/JS:
+                            Generate category records here.
+
+                            Each category should contain:
+                            - category name
+                            - allocated amount
+                            - percentage
+                            - chart color/class
+                        -->
+
+                        <div class="budget-category-item">
+
+                            <span 
+                                class="budget-category-dot"
+                                id="category-color-1">
+                            </span>
+
+                            <strong id="category-name-1">
+                                <!-- PHP/JS: Category name -->
+                            </strong>
+
+                            <span id="category-amount-1">
+                                <!-- PHP/JS: Category amount -->
+                            </span>
+
+                        </div>
+
+
+                        <div class="budget-category-item">
+
+                            <span
+                                class="budget-category-dot"
+                                id="category-color-2">
+                            </span>
+
+                            <strong id="category-name-2">
+                                <!-- PHP/JS: Category name -->
+                            </strong>
+
+                            <span id="category-amount-2">
+                                <!-- PHP/JS: Category amount -->
+                            </span>
+
+                        </div>
+
+                        <div class="budget-category-item">
+
+                            <span
+                                class="budget-category-dot"
+                                id="category-color-3">
+                            </span>
+
+                            <strong id="category-name-3">
+                                <!-- PHP/JS: Category name -->
+                            </strong>
+
+                            <span id="category-amount-3">
+                                <!-- PHP/JS: Category amount -->
+                            </span>
+
+                        </div>
+
+
+                        <div class="budget-category-item">
+
+                            <span
+                                class="budget-category-dot"
+                                id="category-color-4">
+                            </span>
+
+                            <strong id="category-name-4">
+                                <!-- PHP/JS: Category name -->
+                            </strong>
+
+                            <span id="category-amount-4">
+                                <!-- PHP/JS: Category amount -->
+                            </span>
+
+                        </div>
+
+
+                         <!--
+                            PHP/JS:
+                            Additional categories can be generated
+                            dynamically if the database contains
+                            more than four categories.
+                        -->
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <div id="budget-data-status"
+                class="budget-data-status">
+
+                <!--
+                    PHP/JS:
+                    Display loading, error, or database
+                    retrieval messages here.
+
+                    Example:
+                    Loading budget...
+                    Unable to retrieve budget.
+                -->
+
+            </div>
+        
+
+        </main>
+
+
+    </div>
+
+     <!--
+        JAVASCRIPT WILL BE CONNECTED HERE LATER.
+
+        JavaScript can later:
+        - request budget data from PHP
+        - retrieve categories from MySQL
+        - calculate percentages
+        - generate the donut chart
+        - switch between Categories,
+          Allocations and Expenses
+    -->
+
+
+</body>
+</html>

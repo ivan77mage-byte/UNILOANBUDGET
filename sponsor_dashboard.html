@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width", initial-scale="1.0">
+
+    <title>UniLoanBudget - Sponsor Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="nav-group sponsor-nav">
+
+            <span class="role">SPONSOR</span>
+
+            <a class=nav-current href="sponsor_dashboard.html">
+                Dashboard
+            </a>
+            
+            <a href="view_budget.html">
+                View Budget
+            </a>
+
+            <a href="view_expenses.html">
+                View Expenses
+            </a>
+
+        </div>
+
+    </header>
+
+    <!--APP SHELL-->
+    <div class="sponsor-app-shell">
+
+        <aside class="sponsor-sidebar">
+
+            <a class="sponsor-brand" href="#">
+                UniLoan<span>Budget</span>
+            </a>
+
+            <nav class="sponsor-side-nav"
+                aria-label="Sponsor navigation">
+
+                <a class="sponsor-side-current"
+                    href="sponsor_dashboard.html">
+
+                    <span class="sponsor-nav-icon">📊</span>
+                    Dashboard
+
+                </a>
+
+                <a href="view_budget.html">
+                    <span class="sponsor-nav-icon">💰</span>
+                    View Budget
+                </a>
+
+                <a href="view_expenses.html">
+                    <span class="sponsor-nav-icon">🧾</span>
+                    View Expenses
+                </a>
+
+            </nav>
+
+            <div class="sponsor-sidebar-footer">
+                Logged in as Sponsor
+            </div>
+
+        </aside>
+
+        <main class="sponsor-content">
+
+            <section class="sponsor-page-heading">
+                <h1>Welcome Sponsor</h1>
+                <p>Here you can monitor your student's financial status.</p>
+            </section>
+
+            <section class="sponsor-stats-cards">
+
+                <article class="sponsor-card">
+
+                    <h3>Allowance</h3>
+                    <strong id="monthly-allowance">
+                        <!--
+                            PHP/JS
+                            Insert student's monthly allowance here.
+                        -->
+                    </strong>
+
+                    <span id="allowance-period"
+                        class="sponsor-card-unit">
+                        <!--
+                            PHP/JS:
+                            Insert allowance period here.
+                            Example: TZS per month
+                        -->
+                    </span>
+
+                    <p id="allowance-remaining"
+                       class="sponsor-card-status">
+                        <!--
+                            PHP/JS:
+                            Insert remaining allowance information here.
+                        -->
+                    </p>
+
+
+                </article>
+
+                <article class="sponsor-card">
+
+                    <h3>
+                        Spending
+                    </h3>
+
+                    <strong id="total-spending">
+                        <!--
+                            PHP/JS:
+                            Insert student's total spending here.
+                        -->
+                    </strong>
+
+                    <span id="spending-period"
+                          class="sponsor-card-unit">
+                        <!--
+                            PHP/JS:
+                            Insert spending period here.
+                        -->
+                    </span>
+
+                    <span id="spending-status"
+                          class="sponsor-status overspending">
+                        <!--
+                            PHP/JS:
+                            Insert spending status here.
+                        -->
+                    </span>
+
+                </article>
+
+                <article class="sponsor-card">
+
+                     <h3>
+                        Budget Status
+                    </h3>
+
+                    <p class="sponsor-budget=status">
+
+                        <span id="budget-status-icon">
+                            <!--
+                                PHP/JS:
+                                Insert appropiate status icon here.
+                            -->
+                        </span>
+
+                        <span id="budget-status">
+                            <!--
+                                PHP/JS:
+                                Insert budget status here.
+
+                                Example:
+                                Within budget
+                                Over budget
+                            -->
+                        </span>
+
+                    </p>
+                        <strong id="budget-difference">
+                            <!--
+                                PHP/JS:
+                                Insert amount above/below budget here.
+                            -->
+                        </strong>
+
+                </article>
+
+                <article class="sponsor-card">
+
+                    <h3>
+                        Over budget
+                    </h3>
+
+                    <strong id="over-budget-amount"
+                            class="sponsor-over-budget">
+                        <!--
+                            PHP/JS:
+                            Calculate and insert the amount
+                            by which the student is over budget.
+                        -->
+                    </strong>
+
+                </article>
+
+            </section>
+
+            <section class="sponsor-expenses">
+
+                <h2>
+                    Recent Expenses
+                </h2>
+
+                <div class="sponsor-table-wrap">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Date</th>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="expenses-table">
+
+                            <!--
+                                PHP/JS:
+                                Fetch the student's recent expenses
+                                from the database and generate rows here.
+                            -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!--
+        JAVASCRIPT WILL BE CONNECTED HERE LATER.
+
+        Example:
+        <script src="sponsor_dashboard.js"></script>
+
+        JavaScript can later:
+        - fetch data from PHP
+        - update dashboard values
+        - display budget status
+        - display recent expenses
+    -->
+
+</body>
+</html>
+
+<!--
+BUSINESS PROCESS AND NOT PAGE PROCESS
+SYSTEM MUST BE IN THE REQUIRED FLOW
+-PERMISSION AND ROLES
+-->

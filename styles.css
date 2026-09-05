@@ -1,5 +1,5 @@
 :root {
-  --page: #0d172d;
+  --page: #1b1440;
   --sidebar: #0a1325;
   --topbar: #090f1d;
   --panel: #16223b;
@@ -339,3 +339,5557 @@ td { padding: 9px 10px; color: #e6eaf1; font-size: 11px; border-top: 1px solid #
   }
 }
 
+
+
+
+/* =========================
+   ADMIN LOGIN PAGE
+========================= */
+
+.admin-login-page {
+  width: 100%;
+  min-height: calc(100vh - 44px);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.admin-login-left {
+  position: relative;
+
+  min-height: calc(100vh - 44px);
+
+  margin: 0;
+  padding: 51px 53px;
+
+  background: var(--page);
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.admin-login-brand {
+  display: block;
+  width: fit-content;
+
+  margin: 0;
+
+  color: #f0f2f7;
+  text-decoration: none;
+
+  font: 700 20px Georgia, "Times New Roman", serif;
+}
+
+.admin-login-brand span {
+  color: var(--gold);
+}
+
+
+/* =========================
+   LOGIN QUOTE
+========================= */
+
+.admin-login-quote {
+  position: absolute;
+
+  top: 48%;
+  left: 53px;
+
+  transform: translateY(-50%);
+}
+
+.admin-login-quote p {
+  margin: 0;
+
+  color: #e8ebf2;
+
+  font: 400 21px/1.5 Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================
+   LEFT SIDE CAPTION
+========================= */
+
+.admin-login-caption {
+  position: absolute;
+
+  left: 53px;
+  bottom: 15px;
+
+  margin: 0;
+
+  color: #8490a7;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.admin-login-right {
+  min-height: calc(100vh - 44px);
+
+  margin: 0;
+  padding: 40px 30px;
+
+  background: #f8f6f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================
+   LOGIN CONTAINER
+========================= */
+
+.admin-login-container {
+  width: 338px;
+  max-width: 100%;
+
+  margin: 0;
+}
+
+
+/* =========================
+   LOGIN TABS
+========================= */
+
+.admin-login-tabs {
+  width: 100%;
+  height: 34px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin: 0 0 21px;
+  padding: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #ddd9cf;
+  border-radius: 6px;
+
+  background: transparent;
+}
+
+
+/* =========================
+   TAB BUTTONS
+========================= */
+
+.admin-tab {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  color: #777b84;
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.admin-tab.active {
+  color: #ffffff;
+  background: #1c2747;
+}
+
+.admin-tab:hover:not(.active) {
+  background: #efede7;
+}
+
+
+/* =========================
+   LOGIN FORM
+========================= */
+
+.admin-login-form {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.admin-form-group {
+  width: 100%;
+
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.admin-form-group label {
+  display: block;
+
+  margin: 0 0 6px;
+
+  color: #777b84;
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.admin-form-group input {
+  display: block;
+
+  width: 100%;
+  height: 35px;
+
+  margin: 0;
+  padding: 0 11px;
+
+  color: #252a34;
+  background: #ffffff;
+
+  border: 1px solid #dedbd3;
+  border-radius: 6px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 11px;
+
+  box-sizing: border-box;
+}
+
+.admin-form-group input::placeholder {
+  color: #a3a5a9;
+}
+
+.admin-form-group input:focus {
+  border-color: #9c9b98;
+}
+
+
+/* =========================
+   FORM ERROR
+========================= */
+
+.admin-form-error {
+  display: block;
+
+  min-height: 12px;
+
+  margin: 4px 0 0;
+
+  color: var(--red);
+
+  font-size: 9px;
+}
+
+
+/* =========================
+   GENERAL LOGIN MESSAGE
+========================= */
+
+.admin-login-message {
+  min-height: 14px;
+
+  margin: 2px 0 8px;
+
+  color: var(--red);
+
+  font-size: 10px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.admin-login-button {
+  display: block;
+
+  width: 100%;
+  height: 35px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 6px;
+
+  color: #171717;
+  background: var(--gold);
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.admin-login-button:hover {
+  filter: brightness(0.95);
+}
+
+
+/* =========================
+   LOGIN FOOTER
+========================= */
+
+.admin-login-footer {
+  margin: 13px 0 0;
+
+  text-align: center;
+}
+
+.admin-login-footer p {
+  margin: 0;
+
+  color: #85878c;
+
+  font-size: 10px;
+}
+
+.admin-login-footer a {
+  color: #30343c;
+
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE ADMIN LOGIN
+========================= */
+
+@media (max-width: 700px) {
+
+  .admin-login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-login-left {
+    min-height: 260px;
+    padding: 30px;
+  }
+
+  .admin-login-quote {
+    top: 55%;
+    left: 30px;
+  }
+
+  .admin-login-quote p {
+    font-size: 18px;
+  }
+
+  .admin-login-caption {
+    left: 30px;
+    bottom: 12px;
+  }
+
+  .admin-login-right {
+    min-height: 500px;
+    padding: 35px 20px;
+  }
+
+}
+
+/* =========================
+   SPONSOR DASHBOARD
+========================= */
+
+
+/* =========================
+   SPONSOR TOP NAVIGATION
+========================= */
+
+.sponsor-topbar {
+  background: #090f1d;
+}
+
+.sponsor-nav {
+  width: 100%;
+}
+
+.sponsor-nav .role {
+  color: #8490a7;
+}
+
+.sponsor-nav a {
+  color: #bec6d5;
+}
+
+.sponsor-nav a:hover {
+  color: #ffffff;
+}
+
+.sponsor-nav .nav-current {
+  color: #1b1a15;
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+
+/* =========================
+   APPLICATION SHELL
+========================= */
+
+.sponsor-app-shell {
+  min-height: calc(100vh - 44px);
+
+  display: grid;
+
+  grid-template-columns: 148px 1fr;
+
+  background: #0d172d;
+}
+
+
+/* =========================
+   SPONSOR SIDEBAR
+========================= */
+
+.sponsor-sidebar {
+  min-height: calc(100vh - 44px);
+
+  padding: 20px 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #0a1325;
+
+  border-right: 1px solid #17223a;
+}
+
+
+/* =========================
+   SPONSOR BRAND
+========================= */
+
+.sponsor-brand {
+  margin: 0 0 25px 7px;
+
+  color: #f0f2f7;
+
+  text-decoration: none;
+
+  font: 700 16px Georgia, "Times New Roman", serif;
+}
+
+.sponsor-brand span {
+  color: var(--gold);
+}
+
+
+/* =========================
+   SPONSOR SIDE NAVIGATION
+========================= */
+
+.sponsor-side-nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.sponsor-side-nav a {
+  min-height: 32px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 9px;
+
+  color: #a9b3c4;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+.sponsor-side-nav a:hover {
+  background: #131f37;
+  color: #eef3fb;
+}
+
+
+.sponsor-side-nav .sponsor-side-current {
+  color: #f6f8fb;
+
+  background: #1c2c4e;
+}
+
+
+/* =========================
+   SIDE NAV ICON
+========================= */
+
+.sponsor-nav-icon {
+  width: 16px;
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   SIDEBAR FOOTER
+========================= */
+
+.sponsor-sidebar-footer {
+  margin-top: auto;
+
+  padding-top: 12px;
+
+  border-top: 1px solid #162136;
+
+  color: #68758d;
+
+  font-size: 8px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.sponsor-content {
+  min-width: 0;
+  min-height: calc(100vh - 44px);
+
+  padding: 24px 20px;
+
+  color: #eef1f8;
+
+  background:
+    radial-gradient(
+      circle at 75% 25%,
+      #24154c 0%,
+      #18143a 38%,
+      #10162e 100%
+    );
+}
+
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.sponsor-page-heading {
+  margin-bottom: 16px;
+}
+
+
+.sponsor-page-heading h1 {
+  margin: 0;
+
+  color: #f1f1f4;
+
+  font-size: 18px;
+}
+
+
+.sponsor-page-heading p {
+  margin: 5px 0 0;
+
+  color: #a5a7b9;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   STATISTICS CARDS
+========================= */
+
+.sponsor-stats-cards {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+
+  max-width: 760px;
+}
+
+
+/* =========================
+   SPONSOR CARD
+========================= */
+
+.sponsor-card {
+  min-height: 90px;
+
+  padding: 15px 17px;
+
+  background: rgba(22, 31, 61, 0.78);
+
+  border: 1px solid #252750;
+
+  border-radius: 7px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+.sponsor-card h3 {
+  margin: 0 0 4px;
+
+  color: #aeb4c7;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+.sponsor-card strong {
+  display: inline-block;
+
+  color: #f0f1f5;
+
+  font: 600 17px Georgia, "Times New Roman", serif;
+}
+
+
+.sponsor-card-unit {
+  margin-left: 4px;
+
+  color: #aeb4c7;
+
+  font-size: 9px;
+}
+
+
+/* =========================
+   CARD STATUS
+========================= */
+
+.sponsor-card-status {
+  margin: 5px 0 0;
+
+  color: #43a8b5;
+
+  font-size: 9px;
+}
+
+
+.sponsor-status {
+  display: block;
+
+  width: fit-content;
+
+  margin-top: 7px;
+
+  padding: 2px 7px;
+
+  border-radius: 3px;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+
+.sponsor-status.overspending {
+  color: #f2a0a5;
+
+  background: rgba(168, 64, 76, 0.35);
+}
+
+
+/* =========================
+   BUDGET STATUS
+========================= */
+
+.sponsor-budget-status {
+  margin: 7px 0 1px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #e6e7ed;
+
+  font-size: 10px;
+}
+
+
+#budget-status-icon {
+  font-size: 15px;
+}
+
+
+#budget-difference {
+  margin-left: 21px;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   OVER BUDGET
+========================= */
+
+.sponsor-over-budget {
+  color: #f0f1f5;
+}
+
+
+/* =========================
+   RECENT EXPENSES
+========================= */
+
+.sponsor-expenses {
+  max-width: 760px;
+
+  margin-top: 18px;
+
+  padding: 16px;
+
+  background: rgba(22, 31, 61, 0.78);
+
+  border: 1px solid #252750;
+
+  border-radius: 7px;
+}
+
+
+.sponsor-expenses h2 {
+  margin: 0;
+
+  color: #e8eaf1;
+
+  font: 600 13px Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================
+   EXPENSE TABLE
+========================= */
+
+.sponsor-table-wrap {
+  overflow-x: auto;
+
+  margin-top: 12px;
+}
+
+
+.sponsor-expenses table {
+  width: 100%;
+
+  min-width: 500px;
+
+  border-collapse: collapse;
+
+  background: transparent;
+}
+
+
+.sponsor-expenses th {
+  padding: 7px 9px;
+
+  color: #8490a7;
+
+  font-size: 9px;
+
+  text-align: left;
+
+  border-bottom: 1px solid #28314e;
+}
+
+
+.sponsor-expenses td {
+  padding: 8px 9px;
+
+  color: #dfe3eb;
+
+  font-size: 9px;
+
+  border-top: 1px solid #252e49;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+
+  .sponsor-app-shell {
+    grid-template-columns: 58px 1fr;
+  }
+
+  .sponsor-sidebar {
+    padding: 20px 7px;
+  }
+
+  .sponsor-brand {
+    margin-left: 5px;
+
+    font-size: 0;
+  }
+
+  .sponsor-brand::first-letter {
+    font-size: 18px;
+  }
+
+  .sponsor-brand span {
+    font-size: 0;
+  }
+
+  .sponsor-side-nav a {
+    justify-content: center;
+
+    padding: 0;
+
+    font-size: 0;
+  }
+
+  .sponsor-nav-icon {
+    width: auto;
+
+    font-size: 14px;
+  }
+
+  .sponsor-sidebar-footer {
+    font-size: 0;
+  }
+
+  .sponsor-stats-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-content {
+    padding: 20px 14px;
+  }
+
+}
+
+/* =========================
+   SPONSOR VIEW BUDGET PAGE
+========================= */
+
+
+/* =========================
+   APPLICATION SHELL
+========================= */
+
+.sponsor-budget-shell {
+  min-height: calc(100vh - 44px);
+
+  display: grid;
+
+  grid-template-columns: 167px 1fr;
+
+  background: #0d172d;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sponsor-budget-sidebar {
+  min-height: calc(100vh - 44px);
+
+  padding: 20px 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #0a1325;
+
+  border-right: 1px solid #17223a;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.sponsor-budget-brand {
+  margin: 0 0 25px 4px;
+
+  color: #f0f2f7;
+
+  text-decoration: none;
+
+  font: 700 17px Georgia, "Times New Roman", serif;
+}
+
+.sponsor-budget-brand span {
+  color: var(--gold);
+}
+
+
+/* =========================
+   SIDEBAR NAVIGATION
+========================= */
+
+.sponsor-budget-side-nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.sponsor-budget-side-nav a {
+  min-height: 32px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 10px;
+
+  color: #a9b3c4;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+.sponsor-budget-side-nav a:hover {
+  background: #131f37;
+
+  color: #eef3fb;
+}
+
+
+.sponsor-budget-side-nav
+.sponsor-budget-side-current {
+  color: #f6f8fb;
+
+  background: #1c2c4e;
+}
+
+
+/* =========================
+   SIDEBAR ICON
+========================= */
+
+.sponsor-budget-nav-icon {
+  width: 17px;
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   SIDEBAR FOOTER
+========================= */
+
+.sponsor-budget-sidebar-footer {
+  margin-top: auto;
+
+  padding-top: 12px;
+
+  border-top: 1px solid #162136;
+
+  color: #68758d;
+
+  font-size: 8px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.sponsor-budget-content {
+  min-width: 0;
+  min-height: calc(100vh - 44px);
+
+  padding: 22px 18px;
+
+  background:
+    radial-gradient(
+      circle at 72% 25%,
+      #24154c 0%,
+      #18143a 40%,
+      #10162e 100%
+    );
+
+  color: #eef1f8;
+}
+
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.sponsor-budget-heading {
+  margin-bottom: 17px;
+}
+
+
+.sponsor-budget-heading h1 {
+  margin: 0;
+
+  color: #f0f1f5;
+
+  font: 600 19px Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================
+   STUDENT SUMMARY
+========================= */
+
+.student-budget-summary {
+  width: 100%;
+  max-width: 760px;
+
+  min-height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 12px 15px;
+
+  background: rgba(22, 31, 61, 0.78);
+
+  border: 1px solid #252750;
+
+  border-radius: 7px;
+}
+
+
+/* =========================
+   STUDENT INFORMATION
+========================= */
+
+.student-budget-information {
+  min-width: 0;
+}
+
+
+.student-budget-information h2 {
+  margin: 0 0 3px;
+
+  color: #e9ebf2;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+.student-budget-information p {
+  margin: 0;
+
+  color: #8e96ac;
+
+  font-size: 9px;
+}
+
+
+/* =========================
+   MONTHLY ALLOWANCE
+========================= */
+
+.student-budget-allowance {
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+
+.student-budget-allowance strong {
+  color: #e9ebf2;
+
+  font: 600 15px Georgia, "Times New Roman", serif;
+}
+
+
+.student-budget-allowance span {
+  margin-top: 2px;
+
+  color: #8e96ac;
+
+  font-size: 8px;
+}
+
+
+/* =========================
+   BUDGET BREAKDOWN
+========================= */
+
+.budget-breakdown {
+  width: 100%;
+  max-width: 760px;
+
+  margin-top: 7px;
+
+  padding: 10px;
+
+  background: rgba(22, 31, 61, 0.78);
+
+  border: 1px solid #252750;
+
+  border-radius: 7px;
+}
+
+
+/* =========================
+   BUDGET TABS
+========================= */
+
+.budget-tabs {
+  display: flex;
+
+  gap: 7px;
+
+  margin-bottom: 10px;
+}
+
+
+.budget-tab {
+  height: 23px;
+
+  padding: 0 13px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  color: #aeb5c8;
+
+  background: #252d4b;
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.budget-tab:hover {
+  background: #303957;
+
+  color: #f0f2f7;
+}
+
+
+.budget-tab.active {
+  color: #dfe3ed;
+
+  background: #283350;
+}
+
+
+/* =========================
+   CATEGORY LAYOUT
+========================= */
+
+.budget-category-layout {
+  min-height: 175px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+/* =========================
+   DONUT CHART AREA
+========================= */
+
+.budget-chart-area {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================
+   DONUT CHART
+========================= */
+
+.budget-donut-chart {
+  width: 136px;
+  height: 136px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  /*
+      Initial empty state.
+
+      PHP/JS will later replace the
+      background with a calculated
+      conic-gradient based on database data.
+  */
+
+  background: #26334b;
+}
+
+
+/*
+   Donut hole
+*/
+
+.budget-donut-chart::before {
+  content: "";
+
+  position: absolute;
+
+  width: 76px;
+  height: 76px;
+
+  border-radius: 50%;
+
+  background: #151b38;
+}
+
+
+/* =========================
+   DONUT CENTER
+========================= */
+
+.budget-donut-center {
+  position: relative;
+  z-index: 1;
+
+  width: 70px;
+
+  text-align: center;
+}
+
+
+.budget-donut-center span {
+  color: #e9ebf2;
+
+  font-size: 9px;
+}
+
+
+/* =========================
+   CATEGORY LIST
+========================= */
+
+.budget-category-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+
+  padding-right: 5px;
+}
+
+
+/* =========================
+   CATEGORY ITEM
+========================= */
+
+.budget-category-item {
+  min-height: 17px;
+
+  display: grid;
+
+  grid-template-columns: 12px 1fr auto;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #dfe2ea;
+
+  font-size: 9px;
+}
+
+
+/* =========================
+   CATEGORY COLOR DOT
+========================= */
+
+.budget-category-dot {
+  width: 10px;
+  height: 10px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: #3c4a70;
+}
+
+
+/*
+   These classes can later be assigned
+   dynamically by JavaScript according
+   to the category.
+*/
+
+.budget-category-item:nth-child(1) .budget-category-dot {
+  background: var(--gold);
+}
+
+
+.budget-category-item:nth-child(2) .budget-category-dot {
+  background: #344f91;
+}
+
+
+.budget-category-item:nth-child(3) .budget-category-dot {
+  background: #259c9e;
+}
+
+
+.budget-category-item:nth-child(4) .budget-category-dot {
+  background: #d86f6f;
+}
+
+
+.budget-category-item strong {
+  color: #e2e4eb;
+
+  font-size: 9px;
+}
+
+
+.budget-category-item span:last-child {
+  color: #9ea5b8;
+
+  font-size: 9px;
+}
+
+
+/* =========================
+   DATA STATUS
+========================= */
+
+.budget-data-status {
+  width: 100%;
+  max-width: 760px;
+
+  min-height: 12px;
+
+  margin-top: 7px;
+
+  color: #7f8aa1;
+
+  font-size: 9px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+
+  .sponsor-budget-shell {
+    grid-template-columns: 58px 1fr;
+  }
+
+
+  .sponsor-budget-sidebar {
+    padding: 20px 7px;
+  }
+
+
+  .sponsor-budget-brand {
+    margin-left: 5px;
+
+    font-size: 0;
+  }
+
+
+  .sponsor-budget-brand::first-letter {
+    font-size: 18px;
+  }
+
+
+  .sponsor-budget-brand span {
+    font-size: 0;
+  }
+
+
+  .sponsor-budget-side-nav a {
+    justify-content: center;
+
+    padding: 0;
+
+    font-size: 0;
+  }
+
+
+  .sponsor-budget-nav-icon {
+    width: auto;
+
+    font-size: 14px;
+  }
+
+
+  .sponsor-budget-sidebar-footer {
+    font-size: 0;
+  }
+
+
+  .student-budget-summary {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .student-budget-allowance {
+    align-items: flex-start;
+  }
+
+
+  .budget-category-layout {
+    grid-template-columns: 1fr;
+
+    padding: 10px 0;
+  }
+
+
+  .budget-category-list {
+    width: 100%;
+  }
+
+
+  .sponsor-budget-content {
+    padding: 20px 13px;
+  }
+
+}
+
+
+/* =========================
+   SPONSOR VIEW EXPENSES PAGE
+========================= */
+
+
+/* =========================
+   APPLICATION SHELL
+========================= */
+
+.sponsor-expenses-shell {
+  min-height: calc(100vh - 44px);
+
+  display: grid;
+
+  grid-template-columns: 167px 1fr;
+
+  background: #0d172d;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sponsor-expenses-sidebar {
+  min-height: calc(100vh - 44px);
+
+  padding: 20px 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: #0a1325;
+
+  border-right: 1px solid #17223a;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.sponsor-expenses-brand {
+  margin: 0 0 25px 4px;
+
+  color: #f0f2f7;
+
+  text-decoration: none;
+
+  font: 700 17px Georgia, "Times New Roman", serif;
+}
+
+.sponsor-expenses-brand span {
+  color: var(--gold);
+}
+
+
+/* =========================
+   SIDEBAR NAVIGATION
+========================= */
+
+.sponsor-expenses-side-nav {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.sponsor-expenses-side-nav a {
+  min-height: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 10px;
+
+  color: #a9b3c4;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.sponsor-expenses-side-nav a:hover {
+  background: #131f37;
+
+  color: #eef3fb;
+}
+
+.sponsor-expenses-side-nav .sponsor-expenses-side-current {
+  color: #f6f8fb;
+
+  background: #1c2c4e;
+}
+
+
+/* =========================
+   SIDEBAR ICON
+========================= */
+
+.sponsor-expenses-nav-icon {
+  width: 17px;
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   SIDEBAR FOOTER
+========================= */
+
+.sponsor-expenses-sidebar-footer {
+  margin-top: auto;
+
+  padding-top: 12px;
+
+  border-top: 1px solid #162136;
+
+  color: #68758d;
+
+  font-size: 8px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.sponsor-expenses-content {
+  min-width: 0;
+
+  min-height: calc(100vh - 44px);
+
+  padding: 22px 18px;
+
+  background:
+    radial-gradient(
+      circle at 72% 25%,
+      #24154c 0%,
+      #18143a 40%,
+      #10162e 100%
+    );
+
+  color: #eef1f8;
+}
+
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.sponsor-expenses-heading {
+  margin-bottom: 20px;
+}
+
+.sponsor-expenses-heading h1 {
+  margin: 0 0 10px;
+
+  color: #f0f1f5;
+
+  font: 600 19px Georgia, "Times New Roman", serif;
+}
+
+.sponsor-expenses-heading p {
+  margin: 4px 0;
+
+  color: #8e96ac;
+
+  font-size: 9px;
+}
+
+
+/* =========================
+   OVERSPENDING STATUS
+========================= */
+
+.sponsor-expenses-heading .sponsor-expenses-overspending {
+  color: var(--red);
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   EXPENSES TABLE SECTION
+========================= */
+
+.sponsor-expenses-table-section {
+  width: 100%;
+
+  max-width: 900px;
+
+  margin-top: 15px;
+
+  padding: 10px;
+
+  background: rgba(22, 31, 61, 0.78);
+
+  border: 1px solid #252750;
+
+  border-radius: 7px;
+}
+
+
+/* =========================
+   TABLE WRAPPER
+========================= */
+
+.sponsor-expenses-table-wrap {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+
+/* =========================
+   EXPENSES TABLE
+========================= */
+
+.sponsor-expenses-table {
+  width: 100%;
+
+  min-width: 550px;
+
+  border-collapse: collapse;
+
+  color: #eef1f8;
+
+  text-align: left;
+}
+
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.sponsor-expenses-table th {
+  padding: 8px 10px;
+
+  color: #8490a6;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  border-bottom: 1px solid #26334b;
+}
+
+
+/* =========================
+   TABLE DATA
+========================= */
+
+.sponsor-expenses-table td {
+  padding: 10px;
+
+  color: #e6eaf1;
+
+  font-size: 9px;
+
+  border-top: 1px solid #26334b;
+}
+
+
+/* =========================
+   TABLE HOVER
+========================= */
+
+.sponsor-expenses-table tbody tr:hover {
+  background: #1b2844;
+}
+
+
+/* =========================
+   AMOUNT COLUMN
+========================= */
+
+.sponsor-expenses-table td:last-child {
+  font-weight: 600;
+}
+
+
+/* =========================
+   DATA STATUS
+========================= */
+
+.sponsor-expenses-data-status {
+  width: 100%;
+
+  max-width: 900px;
+
+  min-height: 12px;
+
+  margin-top: 8px;
+
+  color: #7f8aa1;
+
+  font-size: 9px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+
+  .sponsor-expenses-shell {
+    grid-template-columns: 58px 1fr;
+  }
+
+  .sponsor-expenses-sidebar {
+    padding: 20px 7px;
+  }
+
+  .sponsor-expenses-brand {
+    margin-left: 5px;
+
+    font-size: 0;
+  }
+
+  .sponsor-expenses-brand::first-letter {
+    font-size: 18px;
+  }
+
+  .sponsor-expenses-brand span {
+    font-size: 0;
+  }
+
+  .sponsor-expenses-side-nav a {
+    justify-content: center;
+
+    padding: 0;
+
+    font-size: 0;
+  }
+
+  .sponsor-expenses-nav-icon {
+    width: auto;
+
+    font-size: 14px;
+  }
+
+  .sponsor-expenses-sidebar-footer {
+    font-size: 0;
+  }
+
+  .sponsor-expenses-content {
+    padding: 20px 13px;
+  }
+
+  .sponsor-expenses-table-section {
+    padding: 7px;
+  }
+
+}
+
+
+/* =========================
+   SPONSOR LOGIN PAGE
+========================= */
+
+
+/* =========================
+   PAGE
+========================= */
+
+.sponsor-login-page {
+  margin: 0;
+
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: #f7f4ed;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* =========================
+   LOGIN CONTAINER
+========================= */
+
+.sponsor-login-container {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns: 50% 50%;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.sponsor-login-left {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 52px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: #111a33;
+
+  color: #eef1f8;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.sponsor-login-brand {
+  color: #f0f2f7;
+
+  text-decoration: none;
+
+  font:
+    700 19px Georgia,
+    "Times New Roman",
+    serif;
+}
+
+
+.sponsor-login-brand span {
+  color: var(--gold);
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.sponsor-login-quote {
+  position: absolute;
+
+  top: 50%;
+
+  left: 52px;
+
+  transform: translateY(-50%);
+
+  max-width: 270px;
+}
+
+
+.sponsor-login-quote p {
+  margin: 0;
+
+  color: #eef1f8;
+
+  font:
+    400 20px/1.5 Georgia,
+    "Times New Roman",
+    serif;
+}
+
+
+/* =========================
+   LEFT FOOTER
+========================= */
+
+.sponsor-login-left-footer {
+  position: absolute;
+
+  left: 52px;
+
+  bottom: 24px;
+
+  color: #8791a5;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.sponsor-login-right {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  background: #f7f4ed;
+}
+
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.sponsor-login-form-container {
+  width: 100%;
+
+  max-width: 338px;
+}
+
+
+/* =========================
+   LOGIN TABS
+========================= */
+
+.sponsor-login-tabs {
+  width: 100%;
+
+  height: 34px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  margin-bottom: 22px;
+
+  border: 1px solid #d8d5ce;
+
+  border-radius: 6px;
+
+  overflow: hidden;
+}
+
+
+.sponsor-login-tab {
+  border: none;
+
+  background: transparent;
+
+  color: #777986;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.sponsor-login-tab.active {
+  color: #f5f5f5;
+
+  background: #1b2748;
+}
+
+
+/* =========================
+   LOGIN FORM
+========================= */
+
+.sponsor-login-form {
+  width: 100%;
+}
+
+
+/* =========================
+   FORM FIELD
+========================= */
+
+.sponsor-login-field {
+  margin-bottom: 13px;
+}
+
+
+.sponsor-login-field label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #777986;
+
+  font-size: 10px;
+}
+
+
+.sponsor-login-field input {
+  width: 100%;
+
+  height: 36px;
+
+  padding: 0 11px;
+
+  color: #242631;
+
+  background: #ffffff;
+
+  border: 1px solid #d9d7d1;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 10px;
+}
+
+
+.sponsor-login-field input::placeholder {
+  color: #a3a4aa;
+}
+
+
+.sponsor-login-field input:focus {
+  border-color: #7d8495;
+
+  box-shadow: 0 0 0 2px rgba(31, 43, 73, 0.08);
+}
+
+
+/* =========================
+   LOGIN STATUS
+========================= */
+
+.sponsor-login-status {
+  min-height: 15px;
+
+  margin: 3px 0 8px;
+
+  color: var(--red);
+
+  font-size: 9px;
+
+  text-align: left;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.sponsor-login-button {
+  width: 100%;
+
+  height: 35px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  color: #1b1a15;
+
+  background: var(--gold);
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.sponsor-login-button:hover {
+  filter: brightness(0.95);
+}
+
+
+/* =========================
+   ACCOUNT HELP
+========================= */
+
+.sponsor-login-account-help {
+  margin: 13px 0 0;
+
+  color: #858690;
+
+  font-size: 10px;
+
+  text-align: center;
+}
+
+
+.sponsor-login-account-help a {
+  color: #424653;
+
+  font-weight: 700;
+
+  text-decoration: underline;
+}
+
+
+.sponsor-login-account-help a:hover {
+  color: #1b2748;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 800px) {
+
+  .sponsor-login-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .sponsor-login-left {
+    min-height: 240px;
+
+    padding: 30px;
+  }
+
+
+  .sponsor-login-quote {
+    position: static;
+
+    transform: none;
+
+    margin-top: 55px;
+
+    max-width: 300px;
+  }
+
+
+  .sponsor-login-quote p {
+    font-size: 17px;
+  }
+
+
+  .sponsor-login-left-footer {
+    display: none;
+  }
+
+
+  .sponsor-login-right {
+    min-height: calc(100vh - 240px);
+
+    padding: 30px 20px;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .sponsor-login-left {
+    min-height: 210px;
+
+    padding: 25px;
+  }
+
+
+  .sponsor-login-quote {
+    margin-top: 40px;
+  }
+
+
+  .sponsor-login-quote p {
+    font-size: 16px;
+  }
+
+
+  .sponsor-login-right {
+    padding: 25px 15px;
+  }
+
+}
+
+
+/* =========================================================
+   STUDENT DASHBOARD
+   ========================================================= */
+
+
+/* =========================================================
+   STUDENT APPLICATION SHELL
+   ========================================================= */
+
+.student-dashboard-shell {
+
+    display: grid;
+
+    grid-template-columns: 203px minmax(0, 1fr);
+
+    min-height: calc(100vh - 44px);
+
+}
+
+
+/* =========================================================
+   STUDENT SIDEBAR
+   ========================================================= */
+
+.student-dashboard-sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: calc(100vh - 44px);
+
+    background: var(--sidebar);
+
+    border-right: 1px solid #17223a;
+
+}
+
+
+/* =========================================================
+   STUDENT BRAND
+   ========================================================= */
+
+.student-dashboard-brand {
+
+    display: block;
+
+    margin: 22px 19px 25px;
+
+    color: #f0f2f7;
+
+    text-decoration: none;
+
+    font: 700 20px Georgia, "Times New Roman", serif;
+
+}
+
+
+.student-dashboard-brand span {
+
+    color: var(--gold);
+
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.student-dashboard-side-nav {
+
+    padding: 0 15px;
+
+}
+
+
+.student-dashboard-side-nav a {
+
+    height: 33px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 11px;
+
+    margin: 1px 0 2px;
+
+    color: #a9b3c4;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.student-dashboard-side-nav a:hover {
+
+    background: #131f37;
+
+    color: #eef3fb;
+
+}
+
+
+/* Current page */
+
+.student-dashboard-side-nav
+.student-dashboard-side-current {
+
+    color: #f6f8fb;
+
+    background: #1c2c4e;
+
+}
+
+
+/* =========================================================
+   SIDEBAR ICONS
+   ========================================================= */
+
+.student-dashboard-nav-icon {
+
+    width: 19px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    font-size: 14px;
+
+    filter: saturate(.7);
+
+}
+
+
+/* =========================================================
+   SIDEBAR FOOTER
+   ========================================================= */
+
+.student-dashboard-sidebar-footer {
+
+    margin-top: auto;
+
+    padding: 15px;
+
+    border-top: 1px solid #17223a;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.student-dashboard-content {
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 32px 38px 40px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #1b2850 0%,
+            #111b35 35%,
+            var(--page) 75%
+        );
+
+    color: var(--text);
+
+}
+
+
+/* =========================================================
+   PAGE HEADING
+   ========================================================= */
+
+.student-dashboard-heading {
+
+    margin-bottom: 25px;
+
+}
+
+
+.student-dashboard-heading h1 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+}
+
+
+.student-dashboard-heading p {
+
+    min-height: 16px;
+
+    margin: 7px 0 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+   ========================================================= */
+
+.student-dashboard-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(160px, 1fr));
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.student-dashboard-card {
+
+    min-height: 125px;
+
+    padding: 17px 18px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--panel-border);
+
+    border-radius: 8px;
+
+}
+
+
+.student-dashboard-card h3 {
+
+    margin: 0 0 23px;
+
+    color: #98a3b8;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+}
+
+
+.student-dashboard-card strong {
+
+    display: block;
+
+    min-height: 29px;
+
+    color: var(--text);
+
+    font: 400 23px Georgia, "Times New Roman", serif;
+
+}
+
+
+/* =========================================================
+   SPENDING BY CATEGORY
+   ========================================================= */
+
+.student-dashboard-categories {
+
+    margin-bottom: 22px;
+
+    padding: 19px 20px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--panel-border);
+
+    border-radius: 8px;
+
+}
+
+
+.student-dashboard-categories h2 {
+
+    margin: 0;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   CATEGORY LIST
+   ========================================================= */
+
+#student-category-list {
+
+    margin-top: 17px;
+
+}
+
+
+/* =========================================================
+   CATEGORY ITEM
+
+   PHP/JS will generate these later.
+   ========================================================= */
+
+.student-category-item {
+
+    margin-bottom: 17px;
+
+}
+
+
+/* =========================================================
+   CATEGORY HEADER
+   ========================================================= */
+
+.student-category-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 6px;
+
+    color: #e6eaf1;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+.student-progress-bar {
+
+    width: 100%;
+
+    height: 9px;
+
+    overflow: hidden;
+
+    background: #26334b;
+
+    border-radius: 10px;
+
+}
+
+
+/* =========================================================
+   PROGRESS FILL
+   ========================================================= */
+
+.student-progress-fill {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: var(--gold);
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+
+}
+
+
+/*
+   PHP/JS will later calculate the actual
+   percentage from database data.
+
+   Example generated value:
+
+   width: 65%;
+*/
+
+
+.student-category-remaining {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   RECENT EXPENSES
+   ========================================================= */
+
+.student-dashboard-expenses {
+
+    padding: 19px 20px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--panel-border);
+
+    border-radius: 8px;
+
+}
+
+
+.student-dashboard-expenses h2 {
+
+    margin: 0;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   EXPENSE TABLE WRAPPER
+   ========================================================= */
+
+.student-dashboard-table-wrap {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================================================
+   EXPENSE TABLE
+   ========================================================= */
+
+.student-dashboard-expenses-table {
+
+    width: 100%;
+
+    min-width: 570px;
+
+    border-collapse: collapse;
+
+    text-align: left;
+
+}
+
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.student-dashboard-expenses-table th {
+
+    padding: 0 10px 8px;
+
+    color: #8490a6;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================================
+   TABLE DATA
+   ========================================================= */
+
+.student-dashboard-expenses-table td {
+
+    padding: 10px;
+
+    color: #e6eaf1;
+
+    font-size: 11px;
+
+    border-top: 1px solid #26334b;
+
+}
+
+
+/* =========================================================
+   DASHBOARD DATA STATUS
+   ========================================================= */
+
+.student-dashboard-data-status {
+
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .student-dashboard-content {
+
+        padding: 28px 25px 35px;
+
+    }
+
+
+    .student-dashboard-summary {
+
+        grid-template-columns:
+            repeat(2, minmax(180px, 1fr));
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL TABLET / PHONE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .student-dashboard-shell {
+
+        grid-template-columns: 58px minmax(0, 1fr);
+
+    }
+
+
+    .student-dashboard-sidebar {
+
+        min-height: calc(100vh - 44px);
+
+    }
+
+
+    .student-dashboard-brand {
+
+        margin: 20px 7px;
+
+        font-size: 0;
+
+    }
+
+
+    .student-dashboard-brand::first-letter {
+
+        font-size: 20px;
+
+    }
+
+
+    .student-dashboard-brand span {
+
+        font-size: 0;
+
+    }
+
+
+    .student-dashboard-side-nav {
+
+        padding: 0 7px;
+
+    }
+
+
+    .student-dashboard-side-nav a {
+
+        justify-content: center;
+
+        gap: 0;
+
+        padding: 0;
+
+        font-size: 0;
+
+    }
+
+
+    .student-dashboard-nav-icon {
+
+        width: auto;
+
+        font-size: 15px;
+
+    }
+
+
+    .student-dashboard-sidebar-footer {
+
+        padding: 10px 5px;
+
+        text-align: center;
+
+        font-size: 0;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — PHONE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .student-dashboard-content {
+
+        padding: 22px 15px 30px;
+
+    }
+
+
+    .student-dashboard-heading h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .student-dashboard-summary {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   STUDENT BUDGET SETUP
+   ========================================================= */
+
+
+/* =========================================================
+   APPLICATION SHELL
+   ========================================================= */
+
+.student-budget-shell {
+
+    display: grid;
+
+    grid-template-columns: 203px minmax(0, 1fr);
+
+    min-height: calc(100vh - 44px);
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.student-budget-sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: calc(100vh - 44px);
+
+    background: var(--sidebar);
+
+    border-right: 1px solid #17223a;
+
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.student-budget-brand {
+
+    display: block;
+
+    margin: 22px 19px 25px;
+
+    color: #f0f2f7;
+
+    text-decoration: none;
+
+    font: 700 20px Georgia, "Times New Roman", serif;
+
+}
+
+
+.student-budget-brand span {
+
+    color: var(--gold);
+
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.student-budget-side-nav {
+
+    padding: 0 15px;
+
+}
+
+
+.student-budget-side-nav a {
+
+    height: 33px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 11px;
+
+    margin: 1px 0 2px;
+
+    color: #a9b3c4;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.student-budget-side-nav a:hover {
+
+    background: #131f37;
+
+    color: #eef3fb;
+
+}
+
+
+/* Current page */
+
+.student-budget-side-nav
+.student-budget-side-current {
+
+    color: #f6f8fb;
+
+    background: #1c2c4e;
+
+}
+
+
+/* =========================================================
+   SIDEBAR ICON
+   ========================================================= */
+
+.student-budget-nav-icon {
+
+    width: 19px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    font-size: 14px;
+
+    filter: saturate(.7);
+
+}
+
+
+/* =========================================================
+   SIDEBAR FOOTER
+   ========================================================= */
+
+.student-budget-sidebar-footer {
+
+    margin-top: auto;
+
+    padding: 15px;
+
+    border-top: 1px solid #17223a;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.student-budget-content {
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 32px 38px 40px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #1b2850 0%,
+            #111b35 35%,
+            var(--page) 75%
+        );
+
+    color: var(--text);
+
+}
+
+
+/* =========================================================
+   PAGE HEADING
+   ========================================================= */
+
+.student-budget-heading {
+
+    margin-bottom: 24px;
+
+}
+
+
+.student-budget-heading h1 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+}
+
+
+.student-budget-heading p {
+
+    min-height: 16px;
+
+    margin: 7px 0 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   BUDGET OVERVIEW
+   ========================================================= */
+
+.student-budget-overview {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(180px, 1fr));
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.student-budget-overview-card {
+
+    min-height: 105px;
+
+    padding: 16px 18px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--panel-border);
+
+    border-radius: 8px;
+
+}
+
+
+.student-budget-overview-card span {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #98a3b8;
+
+    font-size: 11px;
+
+}
+
+
+.student-budget-overview-card strong {
+
+    display: block;
+
+    min-height: 28px;
+
+    color: var(--text);
+
+    font: 400 22px Georgia, "Times New Roman", serif;
+
+}
+
+
+/* =========================================================
+   MAIN BUDGET PANEL
+   ========================================================= */
+
+.student-budget-panel {
+
+    padding: 20px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--panel-border);
+
+    border-radius: 8px;
+
+}
+
+
+/* =========================================================
+   PANEL HEADING
+   ========================================================= */
+
+.student-budget-panel-heading {
+
+    margin-bottom: 24px;
+
+}
+
+
+.student-budget-panel-heading h2 {
+
+    margin: 0;
+
+    font-size: 16px;
+
+}
+
+
+.student-budget-panel-heading p {
+
+    margin: 5px 0 0;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   FORM SECTION
+   ========================================================= */
+
+.student-budget-form-section {
+
+    padding: 20px 0;
+
+    border-top: 1px solid #26334b;
+
+}
+
+
+.student-budget-form-section:first-of-type {
+
+    border-top: 0;
+
+    padding-top: 0;
+
+}
+
+
+.student-budget-form-section h3 {
+
+    margin: 0 0 15px;
+
+    font-size: 13px;
+
+}
+
+
+.student-budget-form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(180px, 1fr));
+
+    gap: 15px;
+
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.student-budget-form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.student-budget-form-group label {
+
+    color: #aeb8ca;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+.student-budget-form-group input,
+.student-budget-form-group select {
+
+    width: 100%;
+
+    height: 38px;
+
+    padding: 0 11px;
+
+    color: var(--text);
+
+    background: #101a31;
+
+    border: 1px solid #2a3855;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+}
+
+
+.student-budget-form-group input:focus,
+.student-budget-form-group select:focus {
+
+    border-color: var(--gold);
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.student-budget-section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.student-budget-section-heading h3 {
+
+    margin: 0;
+
+}
+
+
+.student-budget-section-heading p {
+
+    margin: 4px 0 0;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   ADD CATEGORY BUTTON
+   ========================================================= */
+
+.student-budget-add-category {
+
+    height: 34px;
+
+    padding: 0 13px;
+
+    color: #1b1a15;
+
+    background: var(--gold);
+
+    border: 1px solid var(--gold);
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.student-budget-add-category:hover {
+
+    filter: brightness(1.08);
+
+}
+
+
+/* =========================================================
+   BUDGET TABLE
+   ========================================================= */
+
+.student-budget-table-wrap {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+.student-budget-table {
+
+    width: 100%;
+
+    min-width: 650px;
+
+    border-collapse: collapse;
+
+    text-align: left;
+
+}
+
+
+.student-budget-table th {
+
+    padding: 0 10px 9px;
+
+    color: #8490a6;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+}
+
+
+.student-budget-table td {
+
+    padding: 10px;
+
+    color: #e6eaf1;
+
+    border-top: 1px solid #26334b;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   ALLOCATION INPUT
+
+   These inputs can be generated by PHP/JS
+   inside the category table.
+   ========================================================= */
+
+.student-budget-table input {
+
+    width: 100%;
+
+    height: 34px;
+
+    padding: 0 9px;
+
+    color: var(--text);
+
+    background: #101a31;
+
+    border: 1px solid #2a3855;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+}
+
+
+.student-budget-table input:focus {
+
+    border-color: var(--gold);
+
+}
+
+
+/* =========================================================
+   ALLOCATION SUMMARY
+   ========================================================= */
+
+.student-budget-allocation-summary {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 13px;
+
+    margin-top: 20px;
+
+}
+
+
+.student-budget-allocation-summary > div {
+
+    padding: 14px 16px;
+
+    background: #101a31;
+
+    border: 1px solid #26334b;
+
+    border-radius: 6px;
+
+}
+
+
+.student-budget-allocation-summary span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+.student-budget-allocation-summary strong {
+
+    color: var(--text);
+
+    font: 400 18px Georgia, "Times New Roman", serif;
+
+}
+
+
+/* =========================================================
+   VALIDATION MESSAGE
+   ========================================================= */
+
+.student-budget-validation-message {
+
+    min-height: 18px;
+
+    margin-top: 15px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.student-budget-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+    padding-top: 17px;
+
+    border-top: 1px solid #26334b;
+
+}
+
+
+.student-budget-cancel-button,
+.student-budget-save-button {
+
+    height: 36px;
+
+    padding: 0 17px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* Cancel */
+
+.student-budget-cancel-button {
+
+    color: #aeb8ca;
+
+    background: transparent;
+
+    border: 1px solid #2a3855;
+
+}
+
+
+.student-budget-cancel-button:hover {
+
+    background: #131f37;
+
+    color: #fff;
+
+}
+
+
+/* Save */
+
+.student-budget-save-button {
+
+    color: #1b1a15;
+
+    background: var(--gold);
+
+    border: 1px solid var(--gold);
+
+}
+
+
+.student-budget-save-button:hover {
+
+    filter: brightness(1.08);
+
+}
+
+
+/* =========================================================
+   DATABASE STATUS
+   ========================================================= */
+
+.student-budget-data-status {
+
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .student-budget-content {
+
+        padding: 28px 25px 35px;
+
+    }
+
+
+    .student-budget-form-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(180px, 1fr));
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL TABLET / PHONE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .student-budget-shell {
+
+        grid-template-columns: 58px minmax(0, 1fr);
+
+    }
+
+
+    .student-budget-sidebar {
+
+        min-height: calc(100vh - 44px);
+
+    }
+
+
+    .student-budget-brand {
+
+        margin: 20px 7px;
+
+        font-size: 0;
+
+    }
+
+
+    .student-budget-brand::first-letter {
+
+        font-size: 20px;
+
+    }
+
+
+    .student-budget-brand span {
+
+        font-size: 0;
+
+    }
+
+
+    .student-budget-side-nav {
+
+        padding: 0 7px;
+
+    }
+
+
+    .student-budget-side-nav a {
+
+        justify-content: center;
+
+        gap: 0;
+
+        padding: 0;
+
+        font-size: 0;
+
+    }
+
+
+    .student-budget-nav-icon {
+
+        width: auto;
+
+        font-size: 15px;
+
+    }
+
+
+    .student-budget-sidebar-footer {
+
+        padding: 10px 5px;
+
+        text-align: center;
+
+        font-size: 0;
+
+    }
+
+
+    .student-budget-overview {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .student-budget-section-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .student-budget-add-category {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — PHONE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .student-budget-content {
+
+        padding: 22px 15px 30px;
+
+    }
+
+
+    .student-budget-heading h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .student-budget-form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .student-budget-allocation-summary {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .student-budget-actions {
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    .student-budget-cancel-button,
+    .student-budget-save-button {
+
+        width: 100%;
+
+    }
+
+}
+
+/* =========================================================
+   STUDENT ADD EXPENSE
+   ========================================================= */
+
+
+/* =========================================================
+   APPLICATION SHELL
+   ========================================================= */
+
+.student-expense-shell {
+
+    display: grid;
+
+    grid-template-columns: 203px minmax(0, 1fr);
+
+    min-height: calc(100vh - 44px);
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.student-expense-sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: calc(100vh - 44px);
+
+    background: var(--sidebar);
+
+    border-right: 1px solid #17223a;
+
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.student-expense-brand {
+
+    display: block;
+
+    margin: 22px 19px 25px;
+
+    color: #f0f2f7;
+
+    text-decoration: none;
+
+    font: 700 20px Georgia, "Times New Roman", serif;
+
+}
+
+
+.student-expense-brand span {
+
+    color: var(--gold);
+
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.student-expense-side-nav {
+
+    padding: 0 15px;
+
+}
+
+
+.student-expense-side-nav a {
+
+    height: 33px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 11px;
+
+    margin: 1px 0 2px;
+
+    color: #a9b3c4;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.student-expense-side-nav a:hover {
+
+    background: #131f37;
+
+    color: #eef3fb;
+
+}
+
+
+/* Current page */
+
+.student-expense-side-nav
+.student-expense-side-current {
+
+    color: #f6f8fb;
+
+    background: #1c2c4e;
+
+}
+
+
+/* =========================================================
+   SIDEBAR ICON
+   ========================================================= */
+
+.student-expense-nav-icon {
+
+    width: 19px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    font-size: 14px;
+
+    filter: saturate(.7);
+
+}
+
+
+/* =========================================================
+   SIDEBAR FOOTER
+   ========================================================= */
+
+.student-expense-sidebar-footer {
+
+    margin-top: auto;
+
+    padding: 15px;
+
+    border-top: 1px solid #17223a;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.student-expense-content {
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 32px 38px 40px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #1b2850 0%,
+            #111b35 35%,
+            var(--page) 75%
+        );
+
+    color: var(--text);
+
+}
+
+
+/* =========================================================
+   PAGE HEADING
+   ========================================================= */
+
+.student-expense-heading {
+
+    margin-bottom: 24px;
+
+}
+
+
+.student-expense-heading h1 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+}
+
+
+.student-expense-heading p {
+
+    min-height: 16px;
+
+    margin: 7px 0 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   EXPENSE SUMMARY
+   ========================================================= */
+
+.student-expense-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(180px, 1fr));
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.student-expense-summary-card {
+
+    min-height: 105px;
+
+    padding: 16px 18px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--panel-border);
+
+    border-radius: 8px;
+
+}
+
+
+.student-expense-summary-card span {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #98a3b8;
+
+    font-size: 11px;
+
+}
+
+
+.student-expense-summary-card strong {
+
+    display: block;
+
+    min-height: 28px;
+
+    color: var(--text);
+
+    font: 400 22px Georgia, "Times New Roman", serif;
+
+}
+
+
+/* =========================================================
+   MAIN FORM PANEL
+   ========================================================= */
+
+.student-expense-panel {
+
+    padding: 20px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--panel-border);
+
+    border-radius: 8px;
+
+}
+
+
+/* =========================================================
+   PANEL HEADING
+   ========================================================= */
+
+.student-expense-panel-heading {
+
+    margin-bottom: 24px;
+
+}
+
+
+.student-expense-panel-heading h2 {
+
+    margin: 0;
+
+    font-size: 16px;
+
+}
+
+
+.student-expense-panel-heading p {
+
+    margin: 5px 0 0;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   FORM SECTION
+   ========================================================= */
+
+.student-expense-form-section {
+
+    padding: 20px 0;
+
+    border-top: 1px solid #26334b;
+
+}
+
+
+.student-expense-form-section:first-of-type {
+
+    border-top: 0;
+
+    padding-top: 0;
+
+}
+
+
+.student-expense-form-section h3 {
+
+    margin: 0 0 15px;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.student-expense-form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(180px, 1fr));
+
+    gap: 15px;
+
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.student-expense-form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.student-expense-form-group label {
+
+    color: #aeb8ca;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   INPUTS / SELECT
+   ========================================================= */
+
+.student-expense-form-group input,
+.student-expense-form-group select {
+
+    width: 100%;
+
+    height: 38px;
+
+    padding: 0 11px;
+
+    color: var(--text);
+
+    background: #101a31;
+
+    border: 1px solid #2a3855;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+}
+
+
+.student-expense-form-group input:focus,
+.student-expense-form-group select:focus {
+
+    border-color: var(--gold);
+
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.student-expense-form-group textarea {
+
+    width: 100%;
+
+    min-height: 95px;
+
+    padding: 11px;
+
+    resize: vertical;
+
+    color: var(--text);
+
+    background: #101a31;
+
+    border: 1px solid #2a3855;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+}
+
+
+.student-expense-form-group textarea:focus {
+
+    border-color: var(--gold);
+
+}
+
+
+.student-expense-form-group textarea::placeholder,
+.student-expense-form-group input::placeholder {
+
+    color: #66738b;
+
+}
+
+
+/* =========================================================
+   BUDGET CHECK
+   ========================================================= */
+
+.student-expense-budget-check {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 13px;
+
+    margin-top: 5px;
+
+}
+
+
+.student-expense-budget-check > div {
+
+    padding: 14px 16px;
+
+    background: #101a31;
+
+    border: 1px solid #26334b;
+
+    border-radius: 6px;
+
+}
+
+
+.student-expense-budget-check span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+.student-expense-budget-check strong {
+
+    color: var(--text);
+
+    font: 400 18px Georgia, "Times New Roman", serif;
+
+}
+
+
+/* =========================================================
+   VALIDATION MESSAGE
+   ========================================================= */
+
+.student-expense-validation-message {
+
+    min-height: 18px;
+
+    margin-top: 15px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.student-expense-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+    padding-top: 17px;
+
+    border-top: 1px solid #26334b;
+
+}
+
+
+.student-expense-clear-button,
+.student-expense-save-button {
+
+    height: 36px;
+
+    padding: 0 17px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   CLEAR BUTTON
+   ========================================================= */
+
+.student-expense-clear-button {
+
+    color: #aeb8ca;
+
+    background: transparent;
+
+    border: 1px solid #2a3855;
+
+}
+
+
+.student-expense-clear-button:hover {
+
+    background: #131f37;
+
+    color: #fff;
+
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+   ========================================================= */
+
+.student-expense-save-button {
+
+    color: #1b1a15;
+
+    background: var(--gold);
+
+    border: 1px solid var(--gold);
+
+}
+
+
+.student-expense-save-button:hover {
+
+    filter: brightness(1.08);
+
+}
+
+
+/* =========================================================
+   DATABASE STATUS
+   ========================================================= */
+
+.student-expense-data-status {
+
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .student-expense-content {
+
+        padding: 28px 25px 35px;
+
+    }
+
+
+    .student-expense-form-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(180px, 1fr));
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .student-expense-shell {
+
+        grid-template-columns: 58px minmax(0, 1fr);
+
+    }
+
+
+    .student-expense-sidebar {
+
+        min-height: calc(100vh - 44px);
+
+    }
+
+
+    .student-expense-brand {
+
+        margin: 20px 7px;
+
+        font-size: 0;
+
+    }
+
+
+    .student-expense-brand::first-letter {
+
+        font-size: 20px;
+
+    }
+
+
+    .student-expense-brand span {
+
+        font-size: 0;
+
+    }
+
+
+    .student-expense-side-nav {
+
+        padding: 0 7px;
+
+    }
+
+
+    .student-expense-side-nav a {
+
+        justify-content: center;
+
+        gap: 0;
+
+        padding: 0;
+
+        font-size: 0;
+
+    }
+
+
+    .student-expense-nav-icon {
+
+        width: auto;
+
+        font-size: 15px;
+
+    }
+
+
+    .student-expense-sidebar-footer {
+
+        padding: 10px 5px;
+
+        text-align: center;
+
+        font-size: 0;
+
+    }
+
+
+    .student-expense-summary {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .student-expense-form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — PHONE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .student-expense-content {
+
+        padding: 22px 15px 30px;
+
+    }
+
+
+    .student-expense-heading h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .student-expense-budget-check {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .student-expense-actions {
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    .student-expense-clear-button,
+    .student-expense-save-button {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   STUDENT REPORTS
+   ========================================================= */
+
+
+/* =========================================================
+   APPLICATION SHELL
+   ========================================================= */
+
+.student-reports-shell {
+
+    display: grid;
+
+    grid-template-columns: 203px minmax(0, 1fr);
+
+    min-height: calc(100vh - 44px);
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.student-reports-sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: calc(100vh - 44px);
+
+    background: var(--sidebar);
+
+    border-right: 1px solid #17223a;
+
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.student-reports-brand {
+
+    display: block;
+
+    margin: 22px 19px 25px;
+
+    color: #f0f2f7;
+
+    text-decoration: none;
+
+    font: 700 20px Georgia, "Times New Roman", serif;
+
+}
+
+
+.student-reports-brand span {
+
+    color: var(--gold);
+
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.student-reports-side-nav {
+
+    padding: 0 15px;
+
+}
+
+
+.student-reports-side-nav a {
+
+    height: 33px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 11px;
+
+    margin: 1px 0 2px;
+
+    color: #a9b3c4;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.student-reports-side-nav a:hover {
+
+    background: #131f37;
+
+    color: #eef3fb;
+
+}
+
+
+.student-reports-side-nav
+.student-reports-side-current {
+
+    color: #f6f8fb;
+
+    background: #1c2c4e;
+
+}
+
+
+/* =========================================================
+   SIDEBAR ICON
+   ========================================================= */
+
+.student-reports-nav-icon {
+
+    width: 19px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    font-size: 14px;
+
+    filter: saturate(.7);
+
+}
+
+
+/* =========================================================
+   SIDEBAR FOOTER
+   ========================================================= */
+
+.student-reports-sidebar-footer {
+
+    margin-top: auto;
+
+    padding: 15px;
+
+    border-top: 1px solid #17223a;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.student-reports-content {
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 32px 38px 40px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #1b2850 0%,
+            #111b35 35%,
+            var(--page) 75%
+        );
+
+    color: var(--text);
+
+}
+
+
+/* =========================================================
+   PAGE HEADING
+   ========================================================= */
+
+.student-reports-heading {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+
+}
+
+
+.student-reports-heading h1 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+}
+
+
+.student-reports-heading p {
+
+    min-height: 16px;
+
+    margin: 7px 0 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   GENERATE REPORT BUTTON
+   ========================================================= */
+
+.student-reports-generate-button {
+
+    height: 36px;
+
+    padding: 0 16px;
+
+    color: #1b1a15;
+
+    background: var(--gold);
+
+    border: 1px solid var(--gold);
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.student-reports-generate-button:hover {
+
+    filter: brightness(1.08);
+
+}
+
+
+/* =========================================================
+   REPORT FILTER PANEL
+   ========================================================= */
+
+.student-reports-filter-panel {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 1fr)
+        minmax(180px, 1fr)
+        auto;
+
+    align-items: end;
+
+    gap: 13px;
+
+    margin-bottom: 22px;
+
+    padding: 16px 18px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--panel-border);
+
+    border-radius: 8px;
+
+}
+
+
+/* =========================================================
+   FILTER GROUP
+   ========================================================= */
+
+.student-reports-filter-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.student-reports-filter-group label {
+
+    color: #aeb8ca;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+.student-reports-filter-group select {
+
+    width: 100%;
+
+    height: 36px;
+
+    padding: 0 10px;
+
+    color: var(--text);
+
+    background: #101a31;
+
+    border: 1px solid #2a3855;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+}
+
+
+.student-reports-filter-group select:focus {
+
+    border-color: var(--gold);
+
+}
+
+
+/* =========================================================
+   FILTER BUTTON
+   ========================================================= */
+
+.student-reports-filter-button {
+
+    height: 36px;
+
+    padding: 0 15px;
+
+    color: #cbd5e1;
+
+    background: #101a31;
+
+    border: 1px solid #2a3855;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.student-reports-filter-button:hover {
+
+    color: #fff;
+
+    border-color: #4a5a79;
+
+}
+
+
+/* =========================================================
+   FINANCIAL SUMMARY
+   ========================================================= */
+
+.student-reports-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(160px, 1fr));
+
+    gap: 13px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.student-reports-summary-card {
+
+    min-height: 105px;
+
+    padding: 16px 18px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--panel-border);
+
+    border-radius: 8px;
+
+}
+
+
+.student-reports-summary-card span {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #98a3b8;
+
+    font-size: 11px;
+
+}
+
+
+.student-reports-summary-card strong {
+
+    display: block;
+
+    min-height: 28px;
+
+    color: var(--text);
+
+    font: 400 22px Georgia, "Times New Roman", serif;
+
+}
+
+
+/* =========================================================
+   REPORT PANEL
+   ========================================================= */
+
+.student-reports-panel {
+
+    margin-bottom: 22px;
+
+    padding: 20px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--panel-border);
+
+    border-radius: 8px;
+
+}
+
+
+/* =========================================================
+   PANEL HEADING
+   ========================================================= */
+
+.student-reports-panel-heading {
+
+    margin-bottom: 18px;
+
+}
+
+
+.student-reports-panel-heading h2 {
+
+    margin: 0;
+
+    font-size: 15px;
+
+}
+
+
+.student-reports-panel-heading p {
+
+    margin: 5px 0 0;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.student-reports-table-wrap {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+/* =========================================================
+   REPORT TABLE
+   ========================================================= */
+
+.student-reports-table {
+
+    width: 100%;
+
+    min-width: 700px;
+
+    border-collapse: collapse;
+
+    text-align: left;
+
+}
+
+
+.student-reports-table th {
+
+    padding: 0 10px 9px;
+
+    color: #8490a6;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+}
+
+
+.student-reports-table td {
+
+    padding: 10px;
+
+    color: #e6eaf1;
+
+    border-top: 1px solid #26334b;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   SPENDING ANALYSIS
+   ========================================================= */
+
+.student-reports-analysis {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 1fr)
+        minmax(250px, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* =========================================================
+   CHART AREA
+   ========================================================= */
+
+.student-reports-chart {
+
+    min-height: 220px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #101a31;
+
+    border: 1px solid #26334b;
+
+    border-radius: 7px;
+
+}
+
+
+/*
+    PHP/JS will later generate the actual
+    chart or visualization here.
+*/
+
+
+/* =========================================================
+   ANALYSIS LIST
+   ========================================================= */
+
+.student-reports-analysis-list {
+
+    min-height: 220px;
+
+    padding: 15px;
+
+    background: #101a31;
+
+    border: 1px solid #26334b;
+
+    border-radius: 7px;
+
+}
+
+
+/*
+    PHP/JS will later generate:
+
+    Category
+    Amount
+    Percentage
+    Spending status
+*/
+
+
+/* =========================================================
+   REPORT STATUS
+   ========================================================= */
+
+.student-reports-data-status {
+
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .student-reports-content {
+
+        padding: 28px 25px 35px;
+
+    }
+
+
+    .student-reports-summary {
+
+        grid-template-columns:
+            repeat(2, minmax(180px, 1fr));
+
+    }
+
+
+    .student-reports-filter-panel {
+
+        grid-template-columns:
+            repeat(2, minmax(180px, 1fr));
+
+    }
+
+
+    .student-reports-filter-button {
+
+        width: 100%;
+
+    }
+
+
+    .student-reports-analysis {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .student-reports-shell {
+
+        grid-template-columns:
+            58px minmax(0, 1fr);
+
+    }
+
+
+    .student-reports-sidebar {
+
+        min-height: calc(100vh - 44px);
+
+    }
+
+
+    .student-reports-brand {
+
+        margin: 20px 7px;
+
+        font-size: 0;
+
+    }
+
+
+    .student-reports-brand::first-letter {
+
+        font-size: 20px;
+
+    }
+
+
+    .student-reports-brand span {
+
+        font-size: 0;
+
+    }
+
+
+    .student-reports-side-nav {
+
+        padding: 0 7px;
+
+    }
+
+
+    .student-reports-side-nav a {
+
+        justify-content: center;
+
+        gap: 0;
+
+        padding: 0;
+
+        font-size: 0;
+
+    }
+
+
+    .student-reports-nav-icon {
+
+        width: auto;
+
+        font-size: 15px;
+
+    }
+
+
+    .student-reports-sidebar-footer {
+
+        padding: 10px 5px;
+
+        text-align: center;
+
+        font-size: 0;
+
+    }
+
+
+    .student-reports-heading {
+
+        flex-direction: column;
+
+    }
+
+
+    .student-reports-generate-button {
+
+        width: 100%;
+
+    }
+
+
+    .student-reports-filter-panel {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .student-reports-summary {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 500px
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .student-reports-content {
+
+        padding: 22px 15px 30px;
+
+    }
+
+
+    .student-reports-heading h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .student-reports-panel {
+
+        padding: 16px;
+
+    }
+
+}

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Reports - UniLoanBudget</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+
+
+    <header class="topbar student-reports-topbar">
+
+        <div class="nav-group student-reports-nav">
+
+            <span class="role">
+                STUDENT
+            </span>
+
+
+            <a href="students_dashboard.html">
+                Dashboard
+            </a>
+
+
+            <a href="add_budget.html">
+                Budget Setup
+            </a>
+
+
+            <a href="add_expense.html">
+                Add Expense
+            </a>
+
+
+            <a class="nav-current"
+               href="reports.html">
+
+                Reports
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="student-reports-shell">
+
+
+        <aside class="student-reports-sidebar">
+
+
+            <!-- BRAND -->
+
+            <a class="student-reports-brand" href="#">
+
+                UniLoan<span>Budget</span>
+
+            </a>
+
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="student-reports-side-nav">
+
+
+                <a href="students_dashboard.html">
+
+                    <span class="student-reports-nav-icon">
+                        📊
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+
+                <a href="add_budget.html">
+
+                    <span class="student-reports-nav-icon">
+                        💰
+                    </span>
+
+                    Budget Setup
+
+                </a>
+
+
+
+                <a href="add_expense.html">
+
+                    <span class="student-reports-nav-icon">
+                        🧾
+                    </span>
+
+                    Add Expense
+
+                </a>
+
+
+
+                <a class="student-reports-side-current"
+                   href="reports.html">
+
+                    <span class="student-reports-nav-icon">
+                        📈
+                    </span>
+
+                    Reports
+
+                </a>
+
+
+            </nav>
+
+
+
+            <!-- SIDEBAR FOOTER -->
+
+            <div class="student-reports-sidebar-footer">
+
+                Logged in as Student
+
+            </div>
+
+
+        </aside>
+
+
+        <main class="student-reports-content">
+
+
+            <section class="student-reports-heading">
+
+                <div>
+
+                    <h1>
+                        Financial Reports
+                    </h1>
+
+
+                    <p id="student-reports-info">
+
+                        <!--
+                            PHP/JS:
+
+                            Insert student name,
+                            university and semester information.
+                        -->
+
+                    </p>
+
+                </div>
+
+
+                <!-- REPORT ACTION -->
+
+                <button type="button"
+                        class="student-reports-generate-button"
+                        id="generate-report-button">
+
+                    Generate Report
+
+                </button>
+
+            </section>
+
+
+
+            <section class="student-reports-filter-panel">
+
+
+                <div class="student-reports-filter-group">
+
+                    <label for="report-period">
+                        Report Period
+                    </label>
+
+
+                    <select id="report-period"
+                            name="report_period">
+
+                        <option value="">
+                            Select period
+                        </option>
+
+                        <!--
+                            PHP/JS:
+
+                            Populate available periods
+                            from the student's budget/expense
+                            records.
+                        -->
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="student-reports-filter-group">
+
+                    <label for="report-category">
+                        Category
+                    </label>
+
+
+                    <select id="report-category"
+                            name="report_category">
+
+                        <option value="">
+                            All Categories
+                        </option>
+
+                        <!--
+                            PHP/JS:
+
+                            Populate categories from
+                            the student's budget.
+                        -->
+
+                    </select>
+
+                </div>
+
+
+
+                <button type="button"
+                        class="student-reports-filter-button"
+                        id="apply-report-filter">
+
+                    Apply Filter
+
+                </button>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FINANCIAL SUMMARY
+                 ================================================= -->
+
+            <section class="student-reports-summary">
+
+
+                <!-- TOTAL LOAN -->
+
+                <div class="student-reports-summary-card">
+
+                    <span>
+                        Total Loan
+                    </span>
+
+
+                    <strong id="report-total-loan">
+
+                        <!--
+                            PHP/JS:
+                            Retrieve approved loan amount.
+                        -->
+
+                    </strong>
+
+                </div>
+
+
+
+                <!-- TOTAL ALLOCATED -->
+
+                <div class="student-reports-summary-card">
+
+                    <span>
+                        Total Allocated
+                    </span>
+
+
+                    <strong id="report-total-allocated">
+
+                        <!--
+                            PHP/JS:
+                            Calculate total budget allocation.
+                        -->
+
+                    </strong>
+
+                </div>
+
+
+
+                <!-- TOTAL SPENT -->
+
+                <div class="student-reports-summary-card">
+
+                    <span>
+                        Total Spent
+                    </span>
+
+
+                    <strong id="report-total-spent">
+
+                        <!--
+                            PHP/JS:
+                            Calculate total expenses.
+                        -->
+
+                    </strong>
+
+                </div>
+
+
+
+                <!-- REMAINING -->
+
+                <div class="student-reports-summary-card">
+
+                    <span>
+                        Remaining
+                    </span>
+
+
+                    <strong id="report-remaining">
+
+                        <!--
+                            PHP/JS:
+                            Calculate remaining balance.
+                        -->
+
+                    </strong>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BUDGET PERFORMANCE
+                 ================================================= -->
+
+            <section class="student-reports-panel">
+
+
+                <div class="student-reports-panel-heading">
+
+                    <div>
+
+                        <h2>
+                            Budget Performance
+                        </h2>
+
+
+                        <p>
+                            Compare your planned budget with actual spending.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="student-reports-table-wrap">
+
+
+                    <table class="student-reports-table">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Category
+                                </th>
+
+                                <th>
+                                    Allocated
+                                </th>
+
+                                <th>
+                                    Spent
+                                </th>
+
+                                <th>
+                                    Remaining
+                                </th>
+
+                                <th>
+                                    Usage
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="budget-performance-list">
+
+                            <!--
+                                PHP/JS:
+
+                                Generate one row for every
+                                budget category.
+
+                                Data required:
+
+                                - category name
+                                - allocated amount
+                                - spent amount
+                                - remaining amount
+                                - percentage used
+                                - spending status
+                            -->
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </section>
+
+
+            <section class="student-reports-panel">
+
+
+                <div class="student-reports-panel-heading">
+
+                    <div>
+
+                        <h2>
+                            Spending Analysis
+                        </h2>
+
+
+                        <p>
+                            Overview of spending across your categories.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="student-reports-analysis">
+
+
+                    <!--
+                        PHP/JS:
+
+                        Generate the spending visualization
+                        using actual database information.
+
+                        Possible implementation:
+
+                        - Horizontal bars
+                        - Donut chart
+                        - Percentage indicators
+
+                        No sample data is hard-coded here.
+                    -->
+
+
+                    <div id="spending-analysis-chart"
+                         class="student-reports-chart">
+
+                    </div>
+
+
+                    <div id="spending-analysis-list"
+                         class="student-reports-analysis-list">
+
+                        <!--
+                            PHP/JS:
+
+                            Generate category spending
+                            information here.
+                        -->
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <section class="student-reports-panel">
+
+
+                <div class="student-reports-panel-heading">
+
+                    <div>
+
+                        <h2>
+                            Expense History
+                        </h2>
+
+
+                        <p>
+                            Recorded expenses for the selected period.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="student-reports-table-wrap">
+
+
+                    <table class="student-reports-table">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Description
+                                </th>
+
+                                <th>
+                                    Category
+                                </th>
+
+                                <th>
+                                    Amount
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="report-expense-history">
+
+                            <!--
+                                PHP/JS:
+
+                                Retrieve expense records
+                                from MySQL and generate
+                                table rows here.
+                            -->
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <div id="student-reports-data-status"
+                 class="student-reports-data-status">
+
+                <!--
+                    PHP/JS:
+
+                    Display:
+
+                    - Loading report
+                    - Report generated
+                    - No records found
+                    - Database error
+                -->
+
+            </div>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!--
+        JAVASCRIPT WILL BE CONNECTED HERE LATER
+    -->
+
+
+</body>
+
+</html>

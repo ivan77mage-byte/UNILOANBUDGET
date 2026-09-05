@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    
+    <title>View Expenses - UniLoanBudget</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="nav-group sponsor-nav">
+
+            <span class="role">
+                USER SPONSOR
+            </span>
+
+            <a href="sponsor_dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="view_budget.html">
+                View Budget
+            </a>
+
+            <a class="nav-current"
+               href="view_expenses.html">
+                View Expenses
+            </a>
+
+        </div>
+
+    </header>
+
+    <div class="sponsor-expenses-shell">
+
+        <aside class="sponsor-expenses-sidebar">
+
+            <a class="sponsor-expenses-brand"
+               href="#">
+
+                UniLoan<span>Budget</span>
+
+            </a>
+
+            <nav class="sponsor-expenses-side-nav"
+                aria-label="Sponsor navigation">
+
+                <a href="sponsor_dashboard.html">
+
+                    <span class="sponsor-expenses-nav-icon">
+                        📊
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+                <a href="view_budget.html">
+
+                    <span class="sponsor-expenses-nav-icon">
+                        💰
+                    </span>
+
+                    View Budget
+
+                </a>
+
+                <a class="sponsor-expenses-side-current"
+                   href="view_expenses.html">
+
+                    <span class="sponsor-expenses-nav-icon">
+                        🧾
+                    </span>
+
+                    View Expenses
+
+                </a>
+
+            </nav>
+
+            <div class="sponsor-expenses-sidebar-footer">
+
+                Logged in as Sponsor
+
+            </div>
+
+        </aside>
+
+        <main class="sponsor-expenses-content">
+
+            <section class="sponsor-expenses-heading">
+
+                 <h1>
+                    Student Expenses
+                </h1>
+
+                <p id="expense-student-name">
+
+                    <!--
+                        PHP/JS:
+                        Fetch and insert the student's
+                        name from the database.
+                    -->
+
+                </p>
+
+                <p id="expense-student-university">
+
+                    <!--
+                        PHP/JS:
+                        Fetch and insert the student's
+                        university from the database.
+                    -->
+
+                </p>
+
+                <p id="expense-monthly-budget">
+
+                    <!--
+                        PHP/JS:
+                        Fetch and insert the student's
+                        monthly budget from the database.
+                    -->
+
+                </p>
+
+                <p id="expense-overspending-status"
+                   class="sponsor-expenses-overspending">
+
+                    <!--
+                        PHP/JS:
+                        Calculate and insert the student's
+                        overspending status here.
+                    -->
+
+                </p>
+
+            </section>
+
+            <section class="sponsor-expenses-table-section">
+
+                <div class="sponsor-expenses-table-wrap">
+
+                     <table class="sponsor-expenses-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Description
+                                </th>
+
+                                <th>
+                                    Category
+                                </th>
+
+                                <th>
+                                    Amount
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="expenses-list">
+
+                            <!--
+                                PHP/JS:
+                                Fetch the student's expenses
+                                from the database.
+
+                                PHP/JS should dynamically generate
+                                one table row for each expense.
+
+                                Example database fields:
+                                - expense date
+                                - description
+                                - category
+                                - amount
+                            -->
+
+                        </tbody>
+
+                     </table>
+
+                </div>
+
+            </section>
+
+            <div id="expenses-data-status"
+                class="sponsor-expenses-data-status">
+
+                <!--
+                    PHP/JS:
+                    Display loading or error messages here.
+
+                    Example:
+                    Loading expenses...
+
+                    Unable to retrieve expenses.
+                -->
+
+            </div>
+
+        </main>
+
+    </div>
+
+     <!--
+        JAVASCRIPT WILL BE CONNECTED HERE LATER.
+
+        JavaScript can later:
+
+        - request expense data from PHP
+        - retrieve records from MySQL
+        - insert expense rows into #expenses-list
+        - calculate total spending
+        - compare spending with the budget
+        - determine overspending status
+    -->
+
+</body>
+</html>

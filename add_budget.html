@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Budget - UniLoanBudget</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header class="topbar student-budget-topbar">
+
+        <div class="nav-group student-budget-nav">
+
+            <span class="role">STUDENT</span>
+
+            <a href="students_dashboard.html">
+                Dashboard
+            </a>
+
+            <a class="nav-current" 
+                href="add_budget.html">
+
+                Budget Setup
+
+            </a>
+
+            <a href="add_expenses.html">
+
+                Add Expenses
+
+            </a>
+
+            <a href="reports.html">
+
+                Reports
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!--APPLICATION SHELL-->
+    <div class="student-budget-shell">
+
+        <aside class="student-budget-sidebar">
+
+            <!-- BRAND -->
+
+            <a class="student-budget-brand" href="#">
+
+                UniLoan<span>Budget</span>
+
+            </a>
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="student-budget-side-nav">
+
+                <a href="students_dashboard.html">
+
+                    <span class="student-budget-nav-icon">
+                        📊
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+                <a class="student-budget-side-current"
+                   href="add_budget.html">
+
+                    <span class="student-budget-nav-icon">
+                        💰
+                    </span>
+
+                    Budget Setup
+
+                </a>
+
+                <a href="add_expenses.html">
+
+                    <span class="student-budget-nav-icon">
+                        🧾
+                    </span>
+
+                    Add Expense
+
+                </a>
+
+                <a href="reports.html">
+
+                    <span class="student-budget-nav-icon">
+                        📈
+                    </span>
+
+                    Reports
+
+                </a>
+
+            </nav>
+
+            <!-- SIDEBAR FOOTER -->
+
+            <div class="student-budget-sidebar-footer">
+
+                Logged in as Student
+
+            </div>
+
+        </aside>
+
+
+        <!--MAIN CONTENT-->
+        <main class="student-budget-content">
+
+            <section class="student-budget-heading">
+
+                <h1>Budget Setup</h1>
+
+                <p id="student-budget-info">
+
+                    <!--
+                        PHP/JS:
+
+                        Insert the student's name,
+                        university and current semester
+                        information here.
+                    -->
+
+                </p>
+
+            </section>
+
+            <section class="student-budget-overview">
+
+                <!-- APPROVED LOAN -->
+
+                <div class="student-budget-overview-card">
+
+                    <span>Approved Loan</span>
+
+                    <strong id="approved-loan-amount">
+
+                         <!--
+                            PHP/JS:
+
+                            Retrieve the student's
+                            approved loan amount
+                            from the database.
+                        -->
+
+                    </strong>
+
+                </div>
+
+
+                <!--ALLOCATED-->
+                <div class="student-budget-overview-card">
+
+                    <span>Allocated</span>
+
+                    <strong id="allocated-budget-amount">
+
+                        <!--
+                            PHP/JS:
+
+                            Calculate the total amount
+                            currently allocated to categories.
+                        -->
+
+                    </strong>
+
+                </div>
+
+
+                <!--REMAINING-->
+                <div class="student-budget-overview-card">
+
+                    <span>Unallocated</span>
+
+                    <strong id="unallocated-budget-amount">
+
+                        <!--
+                            PHP/JS:
+
+                            Calculate:
+
+                            Approved Loan - Allocated Amount
+                        -->
+
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!--BUDGET FORM-->
+            <section class="student-budget-panel">
+
+                <div class="student-budget-panel-heading">
+
+                    <div>
+
+                        <h2>Create Your Budget</h2>
+
+                        <p>   
+                            Allocate your available loan across
+                            your expected expenses.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!--ACADEMIC INFORMATION-->
+                <div class="student-budget-form-section">
+
+                    <h3>Academic Information</h3>
+
+                    <div class="student-budget-form-grid">
+
+
+                        <!--ACADEMIC YEAR-->
+                        <div class="student-budget-form-group">
+
+                             <label for="academic-year">
+                                Academic Year
+                            </label>
+
+                            <select id="academic-year"
+                                    name="academic_year">
+                                
+                                <option value="">
+                                    Select academic year
+                                </option>
+
+                                <!--
+                                    PHP:
+
+                                    Generate available academic
+                                    years from the database/system.
+                                -->
+
+                            </select>
+
+                        </div>
+
+
+                        <!--SEMESTER-->
+                        <div class="student-budget-form-group">
+
+                            <label for="semester">Semester</label>
+
+                            <select id="semester"
+                                    name="semester">
+                                
+                                <option value="">
+                                    Select semester
+                                </option>
+
+                                 <!--
+                                    PHP/JS:
+
+                                    Populate semester options
+                                    according to the student's
+                                    academic information.
+                                -->
+
+                            </select>
+
+                        </div>
+
+
+                        <!--BUDGET PERIOD-->
+                        <div class="student-budget-form-group">
+
+                            <label for="budget-period">
+                                Budget Period
+                            </label>
+
+                            <select id="budget-period"
+                                    name="budget_period">
+                            
+                                <option value="">
+                                    Select budget period
+                                </option>
+
+                                <option value="monthly">
+                                    Monthly
+                                </option>
+
+                                <option value="semester">
+                                    Semester
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="student-budget-form-section">
+
+                    <div class="student-budget-section-heading">
+
+                        <div>
+
+                            <h3>Budget Allocation</h3>
+
+                            <p>
+                                Assign an amount to each expense category.
+
+                            </p>
+
+                        </div>
+
+                        <button type="button"
+                            class="student-budget-add-category">
+                        
+                            + Add Category
+
+                        </button>
+
+                    </div>
+
+
+                    <!--CATEGORY TABLE-->
+                    <div class="student-budget-table-wrap">
+
+                        <table class="student-budget-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Category</th>
+                                    <th>
+                                        Description
+                                    </th>
+
+                                    <th>
+                                        Allocated Amount
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="budget-category-list">
+
+                                <!--
+                                    PHP/JS:
+
+                                    Generate the student's
+                                    budget categories here.
+
+                                    Each row should contain:
+
+                                    - Category
+                                    - Description
+                                    - Allocated amount
+                                    - Remove/edit action
+
+                                    Do NOT hard-code actual
+                                    database categories here.
+                                -->
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!--ALLOCATION SUMMARY-->
+                <div class="student-budget-allocation-summary">
+
+                    <div>
+
+                        <span>
+                            Total Allocated
+                        </span>
+
+                        <strong id="budget-total-allocated">
+
+                            <!--
+                                PHP/JS:
+                                Calculate total allocation.
+                            -->
+
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Remaining
+                        </span>
+
+                        <strong id="budget-total-remaining">
+
+                            <!--
+                                PHP/JS:
+                                Calculate remaining amount.
+                            -->
+
+                        </strong>
+
+
+                    </div>
+
+                </div>
+
+
+                <div id="budget-validation-message"
+                     class="student-budget-validation-message">
+
+                    <!--
+                        PHP/JS:
+
+                        Display validation messages here.
+
+                        Examples:
+
+                        - Budget is within the approved loan.
+                        - Allocation exceeds approved loan.
+                        - Please complete all required fields.
+                    -->
+                </div>
+
+
+
+                <div class="student-budget-actions">
+
+                    <button type="button"
+                            class="student-budget-cancel-button">
+
+                        Cancel
+
+                    </button>
+
+                    <button type="button"
+                            class="student-budget-save-button"
+                            id="save-budget-button">
+
+                        Save Budget
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+                        <div id="student-budget-data-status"
+                 class="student-budget-data-status">
+
+                <!--
+                    PHP/JS:
+
+                    Display:
+
+                    - Loading
+                    - Successfully saved
+                    - Database error
+                    - Validation error
+                -->
+
+            </div>
+
+
+        </main>
+
+
+    </div>
+
+    <!--JAVASCRIPT WILL BE CONNECTED HERE LATER-->
+    
+</body>
+</html>

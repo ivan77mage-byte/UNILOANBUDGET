@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+
+    <title>UniLoanBudget - Sponsor Login</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="sponsor-login-page">
+
+    <main class="sponsor-login-container">
+
+        <section class="sponsor-login-left">
+
+            <a class="sponsor-login-brand"
+               href="#">
+
+                UniLoan<span>Budget</span>
+
+            </a>
+
+            <div class="sponsor-login-quote">
+
+                <p>
+                    "Sometimes discipline is sharped 
+                    by the fear of acknowledging there's a coach
+                    /mentor behind you."
+                </p>
+
+            </div>
+
+            <div class="sponsor-login-left-footer">
+
+                - A sponsor helping manage a student's
+                financial support
+
+            </div>
+
+        </section>
+
+        <section class="sponsor-login-right">
+
+            <div class="sponsor-login-form-container">
+
+                <!-- LOGIN / ACCOUNT TABS -->
+
+                <div class="sponsor-login-tabs">
+
+                    <button
+                        type="button"
+                        class="sponsor-login-tab active">
+
+                        Log in
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="sponsor-login-tab">
+
+                        Sponsor account
+
+                    </button>
+
+                </div>
+
+
+                <!-- LOGIN FORM -->
+
+                <form
+                    class="sponsor-login-form"
+                    id="sponsor-login-form"
+                    method="POST"
+                    action="#">
+
+                    <!--
+                        PHP/JS:
+                        Authenticate the sponsor against
+                        the sponsor account stored in MySQL.
+
+                        The form will later send the entered
+                        credentials to the PHP login handler.
+                    -->
+
+                    <!-- SPONSOR EMAIL / ID -->
+
+                    <div class="sponsor-login-field">
+
+                        <label for="sponsor-email-id">
+                            Sponsor Email or ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="sponsor-email-id"
+                            name="sponsor_email_id"
+                            placeholder="Enter your email or sponsor ID"
+                            autocomplete="username">
+
+
+                    </div>
+
+                    <!-- PASSWORD -->
+
+                    <div class="sponsor-login-field">
+
+                        <label for="sponsor-password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="sponsor-password"
+                            name="sponsor_password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password">
+
+                    </div>
+
+                    <!-- LOGIN ERROR / STATUS -->
+
+                    <div
+                        id="sponsor-login-status"
+                        class="sponsor-login-status">
+
+                        <!--
+                            PHP/JS:
+                            Display login validation errors
+                            or authentication status here.
+
+                            Example:
+                            Invalid sponsor credentials.
+                        -->
+
+                    </div>
+
+
+                     <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="sponsor-login-button">
+
+                        Log in
+
+                    </button>
+
+
+                </form>
+
+                <!--ACCOUNT INFORMATION-->
+                <p class="sponsor-login-account-help">
+
+                    Need asponsor account?
+
+                    <a href="#">
+
+                        Contact system administrator
+                    </a>
+
+                    <!--
+                        Later:
+                        Replace # with the appropriate
+                        contact/request-account page.
+                    -->
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--
+        JAVASCRIPT WILL BE CONNECTED HERE LATER.
+
+
+        JavaScript can later:
+
+        - validate the form
+        - send login credentials to PHP
+        - receive authentication response
+        - display errors
+        - redirect the authenticated sponsor
+          to sponsor_dashboard.html
+    -->
+
+
+</body>
+</html>

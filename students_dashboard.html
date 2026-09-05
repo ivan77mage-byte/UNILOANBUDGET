@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard - UniLoanBudget</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header class="topbar student-dashboard-topbar">
+
+         <div class="nav-group student-dashboard-nav">
+
+            <span class="role">
+                STUDENT
+            </span>
+
+            <a class="nav-current"
+               href="students_dashboard.html">
+
+                Dashboard
+
+            </a>
+
+            <a href="add_budget.html">
+
+                Budget Setup
+            </a>
+
+            <a href="add_expenses.html">
+
+                Add Expense
+
+            </a>
+
+            <a href="reports.html">
+
+                Reports
+
+            </a>
+
+
+         </div>
+
+    </header>
+
+
+
+    <div class="student-dashboard-shell">
+
+        <aside class="student-dashboard-sidebar">
+
+
+            <!--BRAND-->
+            <a class="student-dashboard-brand" href="#">
+
+                UniLoan<span>Budget</span>
+
+            </a>
+
+
+            <!--NAVIGATION-->
+            <nav class="student-dashboard-side-nav">
+
+                <a class="student-dashboard-side-current"
+                   href="students_dashboard.html">
+
+                   <span class="student-dashboard-nav-icon">
+                        📊
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+                <a href="add_budget.html">
+
+                    <span class="student-dashboard-nav-icon">
+                        💰
+                    </span>
+
+                    Budget Setup
+
+                </a>
+
+                <a href="add_expenses.html">
+
+                    <span class="student-dashboard-nav-icon">
+                        🧾
+                    </span>
+
+                    Add Expense
+
+                </a>
+
+                <a href="reports.html">
+
+                    <span class="student-dashboard-nav-icon">
+                        📈
+                    </span>
+
+                    Reports
+
+                </a>
+
+
+            </nav>
+            
+
+            <!--FOOTER-->
+            <div class="student-dashboard-sidebar-footer">
+
+                Logged in as Student
+
+            </div>
+
+
+        </aside>
+            
+            
+        <!--MAIN CONTENT-->
+
+        <main class="student-dashboard-content">
+
+            <section class="student-dashboard-heading">
+
+                <h1>
+                    Student Dashboard
+                </h1>
+
+
+                <p id="student-dashboard-info">
+
+                    <!--
+                        PHP/JS:
+                        Insert the student's name, university,
+                        and current semester information here.
+                        -->
+
+                </p>
+
+            </section>
+
+
+            <section class="student-dashboard-summary">
+
+
+                <!--TOTAL LOAN-->
+                <div class="student-dashboard-card">
+
+                    <h3>Total Loan</h3>
+
+                    <strong id="student-total-loan">
+
+                        <!--
+                            PHP/JS:
+                            Insert total approved loan amount from database.
+                        -->
+
+                    </strong>
+
+                </div>
+
+
+                <!--SPENT SO FAR-->
+                <div class="student-dashboard-card">
+
+                    <h3>Spent So Far</h3>
+
+                    <strong id="student-spent-amount">
+
+                        <!--
+                            PHP/JS:
+                            Insert total amount spent from database.
+                        -->
+
+                    </strong>
+                    
+                </div>
+
+
+                <!--REMAINING BALANCE-->
+                <div class="student-dashboard-card">
+
+                    <h3>Remaining</h3>
+
+                    <strong id="student-remaining-balance">
+
+                        <!--
+                            PHP/JS:
+                            Calculate and insert the
+                            remaining loan/budget balance.
+                        -->
+
+                    </strong>
+
+                </div>
+
+
+
+                <!-- BUDGET PACE -->
+
+                <div class="student-dashboard-card">
+
+                    <h3>On Pace</h3>
+
+                    <strong id="student-budget-pace">
+
+                        <!--
+                            PHP/JS:
+                            Insert budget pace / remaining days information here.
+                        -->
+
+                    </strong>
+
+                </div>
+
+            </section>
+                    
+            
+            <!--SPENDING BY CATEGORY-->
+            <section class="student-dashboard-categories">
+
+                <h2>Spending by Category</h2>
+
+                <div id="student-category-list">
+
+
+                    <!--
+                            PHP/JS:
+                            Fetch the student's budget
+                            categories from the database.
+
+                            For every category, generate:
+
+                                - category name
+                                - amount spent
+                                - allocated amount
+                                - remaining amount
+                                - percentage used
+                                - progress bar
+                    -->
+
+
+                </div>
+
+            </section>
+
+
+            <!--RECENT EXPENSES-->
+            <section class="student-dashboard-expenses">
+
+                <h2>Recent Expenses</h2>
+
+                <div class="student-expenses-table-wrap">
+
+                    <table class="student-dashboard-expenses-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Date</th>
+
+                                <th>Description</th>
+
+                                <th>Category</th>
+
+                                <th>Amount</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="recent-expenses-list">
+
+
+                            <!--
+                                    PHP/JS:
+                                    Retrieve recent expenses from database
+                                    and generate table rows here.
+                            -->
+                                
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <div id="student-dashboard-data-status"
+                class="student-dashboard-data-status">
+
+                <!--
+                        PHP/JS:
+                        Display loading, error, or database
+                        retrieval messages here.
+
+                        Example:
+
+                        Loading dashboard...
+
+                        Unable to retrieve dashboard data.
+                -->
+
+            </div>
+
+        </main>
+
+    </div>
+
+        <!--
+            JAVASCRIPT WILL BE CONNECTED HERE LATER.
+
+            JavaScript can later:
+
+                - identify the logged-in student
+                - request student information from PHP
+                - retrieve loan information from MySQL
+                - retrieve budget information
+                - retrieve expense records
+                - calculate remaining balance
+                - calculate spending pace
+                - generate category progress bars
+                - populate the recent expenses table
+        -->
+
+</body>
+</html>

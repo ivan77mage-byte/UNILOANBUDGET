@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Expense - UniLoanBudget</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+
+
+    <header class="topbar student-expense-topbar">
+
+        <div class="nav-group student-expense-nav">
+
+            <span class="role">
+                STUDENT
+            </span>
+
+
+            <a href="students_dashboard.html">
+                Dashboard
+            </a>
+
+
+            <a href="add_budget.html">
+                Budget Setup
+            </a>
+
+
+            <a class="nav-current"
+               href="add_expense.html">
+
+                Add Expense
+
+            </a>
+
+
+            <a href="reports.html">
+                Reports
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="student-expense-shell">
+
+
+        <!--SIDEBAR-->
+
+        <aside class="student-expense-sidebar">
+
+
+            <!-- BRAND -->
+
+            <a class="student-expense-brand" href="#">
+
+                UniLoan<span>Budget</span>
+
+            </a>
+
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="student-expense-side-nav">
+
+
+                <a href="students_dashboard.html">
+
+                    <span class="student-expense-nav-icon">
+                        📊
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+
+                <a href="add_budget.html">
+
+                    <span class="student-expense-nav-icon">
+                        💰
+                    </span>
+
+                    Budget Setup
+
+                </a>
+
+
+
+                <a class="student-expense-side-current"
+                   href="add_expense.html">
+
+                    <span class="student-expense-nav-icon">
+                        🧾
+                    </span>
+
+                    Add Expense
+
+                </a>
+
+
+
+                <a href="reports.html">
+
+                    <span class="student-expense-nav-icon">
+                        📈
+                    </span>
+
+                    Reports
+
+                </a>
+
+
+            </nav>
+
+
+
+            <!-- SIDEBAR FOOTER -->
+
+            <div class="student-expense-sidebar-footer">
+
+                Logged in as Student
+
+            </div>
+
+
+        </aside>
+
+
+        <main class="student-expense-content">
+
+
+            <section class="student-expense-heading">
+
+                <h1>
+                    Add Expense
+                </h1>
+
+
+                <p id="student-expense-info">
+
+                    <!--
+                        PHP/JS:
+
+                        Insert student name,
+                        university and current semester
+                        information here.
+                    -->
+
+                </p>
+
+            </section>
+
+
+
+            <!-- 
+                 CURRENT BUDGET SUMMARY
+            -->
+
+            <section class="student-expense-summary">
+
+
+                <!-- AVAILABLE BUDGET -->
+
+                <div class="student-expense-summary-card">
+
+                    <span>
+                        Available Budget
+                    </span>
+
+
+                    <strong id="expense-available-budget">
+
+                        <!--
+                            PHP/JS:
+
+                            Retrieve the student's
+                            remaining budget from MySQL.
+                        -->
+
+                    </strong>
+
+                </div>
+
+
+
+                <!-- TOTAL SPENT -->
+
+                <div class="student-expense-summary-card">
+
+                    <span>
+                        Total Spent
+                    </span>
+
+
+                    <strong id="expense-total-spent">
+
+                        <!--
+                            PHP/JS:
+
+                            Retrieve the total amount
+                            spent by the student.
+                        -->
+
+                    </strong>
+
+                </div>
+
+
+
+                <!-- CURRENT BUDGET -->
+
+                <div class="student-expense-summary-card">
+
+                    <span>
+                        Current Budget
+                    </span>
+
+
+                    <strong id="expense-current-budget">
+
+                        <!--
+                            PHP/JS:
+
+                            Retrieve the student's
+                            current budget allocation.
+                        -->
+
+                    </strong>
+
+                </div>
+
+
+            </section>
+
+
+            <section class="student-expense-panel">
+
+
+                <div class="student-expense-panel-heading">
+
+                    <div>
+
+                        <h2>
+                            Record New Expense
+                        </h2>
+
+                        <p>
+                            Enter the details of your expenditure below.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="student-expense-form-section">
+
+
+                    <h3>
+                        Expense Information
+                    </h3>
+
+
+                    <div class="student-expense-form-grid">
+
+
+                        <!-- EXPENSE DATE -->
+
+                        <div class="student-expense-form-group">
+
+                            <label for="expense-date">
+                                Date
+                            </label>
+
+
+                            <input
+                                type="date"
+                                id="expense-date"
+                                name="expense_date"
+                            >
+
+                        </div>
+
+
+
+                        <!-- CATEGORY -->
+
+                        <div class="student-expense-form-group">
+
+                            <label for="expense-category">
+                                Category
+                            </label>
+
+
+                            <select
+                                id="expense-category"
+                                name="expense_category"
+                            >
+
+                                <option value="">
+                                    Select category
+                                </option>
+
+
+                                <!--
+                                    PHP/JS:
+
+                                    Retrieve categories from
+                                    the student's saved budget.
+
+                                    Do NOT hard-code database
+                                    categories here.
+                                -->
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- AMOUNT -->
+
+                        <div class="student-expense-form-group">
+
+                            <label for="expense-amount">
+                                Amount (TZS)
+                            </label>
+
+
+                            <input
+                                type="number"
+                                id="expense-amount"
+                                name="expense_amount"
+                                min="0"
+                                step="1"
+                                placeholder="Enter amount"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="student-expense-form-section">
+
+
+                    <h3>
+                        Expense Description
+                    </h3>
+
+
+                    <div class="student-expense-form-group">
+
+
+                        <label for="expense-description">
+                            Description
+                        </label>
+
+
+                        <textarea
+                            id="expense-description"
+                            name="expense_description"
+                            rows="4"
+                            placeholder="Describe what the expense was for..."
+                        ></textarea>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="student-expense-form-section">
+
+
+                    <h3>
+                        Additional Information
+                    </h3>
+
+
+                    <div class="student-expense-form-grid">
+
+
+                        <!-- PAYMENT METHOD -->
+
+                        <div class="student-expense-form-group">
+
+                            <label for="payment-method">
+                                Payment Method
+                            </label>
+
+
+                            <select
+                                id="payment-method"
+                                name="payment_method"
+                            >
+
+                                <option value="">
+                                    Select payment method
+                                </option>
+
+                                <option value="cash">
+                                    Cash
+                                </option>
+
+                                <option value="mobile_money">
+                                    Mobile Money
+                                </option>
+
+                                <option value="bank">
+                                    Bank Transfer
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- REFERENCE -->
+
+                        <div class="student-expense-form-group">
+
+                            <label for="expense-reference">
+                                Reference / Receipt No.
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="expense-reference"
+                                name="expense_reference"
+                                placeholder="Optional reference"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="student-expense-budget-check">
+
+
+                    <div>
+
+                        <span>
+                            Category Budget
+                        </span>
+
+
+                        <strong id="selected-category-budget">
+
+                            <!--
+                                PHP/JS:
+
+                                Display the amount allocated
+                                to the selected category.
+                            -->
+
+                        </strong>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <span>
+                            Category Remaining
+                        </span>
+
+
+                        <strong id="selected-category-remaining">
+
+                            <!--
+                                PHP/JS:
+
+                                Calculate:
+
+                                Category Allocation
+                                -
+                                Category Spending
+                            -->
+
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- 
+                     VALIDATION MESSAGE
+                -->
+
+                <div id="expense-validation-message"
+                     class="student-expense-validation-message">
+
+                    <!--
+                        PHP/JS:
+
+                        Display validation messages here.
+
+                        Examples:
+
+                        - Expense is within the category budget.
+                        - Expense exceeds category budget.
+                        - Please select a category.
+                        - Please enter a valid amount.
+                    -->
+
+                </div>
+
+
+
+                <div class="student-expense-actions">
+
+
+                    <button
+                        type="button"
+                        class="student-expense-clear-button"
+                        id="clear-expense-button">
+
+                        Clear
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="student-expense-save-button"
+                        id="save-expense-button">
+
+                        Save Expense
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <div id="student-expense-data-status"
+                 class="student-expense-data-status">
+
+                <!--
+                    PHP/JS:
+
+                    Display:
+
+                    - Loading
+                    - Expense saved successfully
+                    - Database error
+                    - Validation error
+                -->
+
+            </div>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!--
+         JAVASCRIPT WILL BE CONNECTED HERE LATER
+     -->
+
+
+</body>
+
+</html>
